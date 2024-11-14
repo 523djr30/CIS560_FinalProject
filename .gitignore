@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/FootballStatsApp/.vs/FootballStatsApp/FileContentIndex
+/FootballStatsApp/.vs/FootballStatsApp/v17/ResourceExplorer
