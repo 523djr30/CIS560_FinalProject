@@ -16,6 +16,14 @@ public class Table : IEnumerable<Row>
         for (int i = 0; i<data.Length;i++)
             Data[i] = new Row(data[i],columns);
     }
+
+    public string[] GetColNames()
+    {
+        string[] ret = new string[Columns.Count];
+        foreach (var (name,(_,index)) in Columns)
+            ret[index] = name;
+        return ret;
+    }
     
     public Row this[int row] => Data[row];
 

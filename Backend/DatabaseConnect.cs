@@ -49,16 +49,16 @@ internal static class DatabaseConnect
 
 
     //prefix dates with a !, like "!2024-11-18"
-    public static int InsertRows(string tableName, string colNames, object[][] data)
+    public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data)
     {
         StringBuilder sb = new();
         sb.Append("Insert into Football.").Append(tableName).Append('(').Append(colNames).Append(")\nValues");
-        bool firstCol, firstRow = true;
+        bool firstRow = true;
         foreach (object[] row in data)
         {
             sb.Append(firstRow ? "\n(" : ",\n(");
             firstRow = false;
-            firstCol = true;
+            bool firstCol = true;
             foreach (object d in row)
             {
                 if (d is int dI)
@@ -80,10 +80,11 @@ internal static class DatabaseConnect
         }
 
         sb.Append(";\nGO");
-        // Console.WriteLine(sb);
-        return RunDmlText(sb.ToString());
-        // return -1;
+        return sb.ToString();
     }
+
+    public static int InsertRows(string tableName, string colNames, object[][] data) =>
+        RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
 
 
     //array of rows, where each row is an array of data returned from the query
