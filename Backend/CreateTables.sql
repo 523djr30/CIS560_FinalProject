@@ -32,8 +32,9 @@ GO
 -- Stage 1: Standalone Tables
 Create Table Football.Positions
 (
-    PositionId   int          not null identity (1, 1) primary key,
-    PositionName NVarChar(32) not null unique,
+    PositionId int          not null identity (1, 1) primary key,
+    Name       NVarChar(32) not null unique,
+    ShortName  NVarChar(4)  not null unique,
 );
 
 Create Table Football.Team
@@ -127,8 +128,31 @@ Create Table Football.PlayerMatchStats
     Points              int,
     --TODO more stats
 );
+GO
+
+/*
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
