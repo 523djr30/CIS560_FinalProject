@@ -1,0 +1,17 @@
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.exe
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.deps.json
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.runtimeconfig.json
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.pdb
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.GenerateResource.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfoInputs.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfo.cs
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.CoreCompileInputs.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.sourcelink.json
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\refint\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.pdb
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.genruntimeconfig.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\ref\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingView.resources
