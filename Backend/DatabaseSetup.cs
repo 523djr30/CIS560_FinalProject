@@ -15,6 +15,7 @@ internal static class DatabaseSetup
     {
         CreateTables();
         ExamplePopulateTable();
+        // PopulateAllTables();
     }
 
     private static void CreateTables() => RunDmlFile("CreateTables");
@@ -45,7 +46,7 @@ internal static class DatabaseSetup
     ];
 
     //calls all the other populate functions in the correct order and checks rows affected
-    private static int populateAllTables()
+    private static int PopulateAllTables()
     {
         int sum = 0;
         foreach (var func in PopulateMethods)
