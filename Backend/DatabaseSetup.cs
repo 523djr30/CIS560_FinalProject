@@ -14,8 +14,8 @@ internal static class DatabaseSetup
     public static void ForceSetupDB()
     {
         CreateTables();
-        ExamplePopulateTable();
-        // PopulateAllTables();
+        // ExamplePopulateTable();
+        PopulateAllTables();
     }
 
     private static void CreateTables() => RunDmlFile("CreateTables");
@@ -53,7 +53,7 @@ internal static class DatabaseSetup
         {
             int affectedRows = func.Invoke();
             if (affectedRows <= 0)
-                Console.WriteLine("Table may not have been populated");
+                Console.WriteLine("Table may not have been populated by "+func.Method.Name);
             sum += affectedRows;
         }
 
@@ -63,10 +63,67 @@ internal static class DatabaseSetup
 
 
     //per table populations.
-    private static int PopulatePositions()=>0;          //TODO: not implemented.
-    private static int PopulateTeam()=>0;               //TODO: not implemented.
-    private static int PopulateDivision()=>0;           //TODO: not implemented.
-    private static int PopulatePlayer()=>0;             //TODO: not implemented.
+    private static int PopulatePositions()=>InsertRows("Positions","ShortName,Name",[
+        ["QB","Quarterback"],
+        ["RB","Running Back"],
+        ["WR","Wide Receiver"],
+        ["TE","Tight End"],
+        ["OL","Offensive Lineman"],
+        ["DL","Defensive Lineman"],
+        ["LB","Linebacker"],
+        ["CB","Cornerback"],
+        ["S","Safety"],
+        ["K","Kicker"],
+        ["P","Punter"]
+    ]);
+    
+    private static int PopulateTeam()=>InsertRows("Team","State,Name",[
+        ["State Unknown","Buffalo Bills"],
+        ["State Unknown","Miami Dolphins"],
+        ["State Unknown","New England Patriots"],
+        ["State Unknown","New York Jets"],
+        ["State Unknown","Baltimore Ravens"],
+        ["State Unknown","Cincinnati Bengals"],
+        ["State Unknown","Cleveland Browns"],
+        ["State Unknown","Pittsburgh Steelers"],
+        ["State Unknown","Houston Texans"],
+        ["State Unknown","Indianapolis Colts"],
+        ["State Unknown","Jacksonville Jaguars"],
+        ["State Unknown","Tennessee Titans"],
+        ["State Unknown","Denver Broncos"],
+        ["State Unknown","Kansas City Chiefs"],
+        ["State Unknown","Las Vegas Raiders"],
+        ["State Unknown","Los Angeles Chargers"],
+        ["State Unknown","Dallas Cowboys"],
+        ["State Unknown","New York Giants"],
+        ["State Unknown","Philadelphia Eagles"],
+        ["State Unknown","Washington Commanders"],
+        ["State Unknown","Chicago Bears"],
+        ["State Unknown","Detroit Lions"],
+        ["State Unknown","Green Bay Packers"],
+        ["State Unknown","Minnesota Vikings"],
+        ["State Unknown","Atlanta Falcons"],
+        ["State Unknown","Carolina Panthers"],
+        ["State Unknown","New Orleans Saints"],
+        ["State Unknown","Tampa Bay Buccaneers"],
+        ["State Unknown","Arizona Cardinals"],
+        ["State Unknown","Los Angeles Rams"],
+        ["State Unknown","San Francisco 49ers"],
+        ["State Unknown","Seattle Seahawks"]
+    ]);
+    
+    private static int PopulateDivision()=>InsertRows("Division","Name",[
+        ["AFC NORTH"],
+        ["AFC EAST"],
+        ["AFC SOUTH"],
+        ["AFC WEST"]
+    ]);
+
+    private static int PopulatePlayer()
+    {
+        FileManager.getBios();
+        return 0;
+    }
     private static int PopulateSeason()=>0;             //TODO: not implemented.
     private static int PopulateDivisionMembership()=>0; //TODO: not implemented.
     private static int PopulatePlayerTeamHistory()=>0;  //TODO: not implemented.

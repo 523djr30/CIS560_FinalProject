@@ -13,28 +13,19 @@ namespace Backend;
 internal static class DatabaseConnect
 {
     private const string ConnectionString = "Server=(localdb)\\MSSQLLocalDB; Integrated Security=true";
-    private static readonly string PathToBackend;
-
-    static DatabaseConnect()
-    {
-        //TODO: this is kind of a hacky way to find the folder with the SQL files,
-        //      but it works fine for now
-        PathToBackend = "Backend/SQL";
-        for (int i = 0; i < 5; i++)
-        {
-            if (Directory.Exists(PathToBackend)) return;
-            PathToBackend = "../" + PathToBackend;
-        }
-    }
-
-    private static SqlConnection Connect() => new(ConnectionString);
+    
 
     public static T CallWithFile<T>(Func<string, T> func, string filename)
     {
-        string sql = File.ReadAllText(PathToBackend+'\\' + filename + ".sql");
+        string sql = File.ReadAllText(FileManager.SqlPath + filename + ".sql");
         return func.Invoke(sql);
     }
-    
+
+    public static void SaveSql(string filename, string sql) =>
+        File.WriteAllText(FileManager.SqlPath + filename + ".sql", sql);
+
+    private static SqlConnection Connect() => new(ConnectionString);
+
     public static int RunDmlText(string sql)
     {
         using var con = Connect();
@@ -43,16 +34,17 @@ internal static class DatabaseConnect
         Console.WriteLine(r + " rows affected");
         return r;
     }
+
     public static int RunDmlFile(string filename) => CallWithFile(RunDmlText, filename);
 
 
-
-
     //prefix dates with a !, like "!2024-11-18"
-    public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data)
+    public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data) =>
+        "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO";
+
+    public static string ValuesSqlGen(object[][] data)
     {
-        StringBuilder sb = new();
-        sb.Append("Insert into Football.").Append(tableName).Append('(').Append(colNames).Append(")\nValues");
+        StringBuilder sb = new("Values\n");
         bool firstRow = true;
         foreach (object[] row in data)
         {
@@ -79,7 +71,6 @@ internal static class DatabaseConnect
             sb.Append(')');
         }
 
-        sb.Append(";\nGO");
         return sb.ToString();
     }
 
@@ -112,11 +103,11 @@ internal static class DatabaseConnect
             Dictionary<string, (Type, int)> colDict = [];
             foreach (DbColumn col in cols)
             {
-                if(col.ColumnOrdinal!=null && col.DataType!=null)
+                if (col.ColumnOrdinal != null && col.DataType != null)
                     colDict[col.ColumnName] = ((Type, int))(col.DataType, col.ColumnOrdinal);
             }
-            
-            return new Table(ret.ToArray(),colDict);
+
+            return new Table(ret.ToArray(), colDict);
         }
         catch (SqlException e)
         {
@@ -125,6 +116,7 @@ internal static class DatabaseConnect
 
         return null;
     }
+
     public static Table? QueryFile(string filename) => CallWithFile(QueryText, filename);
 
 
