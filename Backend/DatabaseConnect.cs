@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.IO;
 using System.Text;
-using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using Microsoft.SqlServer.Management.Smo;
 using Microsoft.SqlServer.Management.Common;
@@ -87,9 +87,8 @@ internal static class DatabaseConnect
 
 
     //array of rows, where each row is an array of data returned from the query
-    public static object[][]? QueryText(string sql)
+    public static Table? QueryText(string sql)
     {
-        object[][]? r = null;
         try
         {
             List<object[]> ret = [];
@@ -98,35 +97,44 @@ internal static class DatabaseConnect
             con.Open();
             using SqlDataReader reader = command.ExecuteReader();
 
-            int columns = reader.GetColumnSchema().Count;
+            var cols = reader.GetColumnSchema();
+            if (cols == null)
+                return null;
 
             while (reader.Read())
             {
-                object[] row = new object[columns];
+                object[] row = new object[cols.Count];
                 reader.GetValues(row);
                 ret.Add(row);
             }
 
-            r = ret.ToArray();
+            Dictionary<string, (Type, int)> colDict = [];
+            foreach (DbColumn col in cols)
+            {
+                if(col.ColumnOrdinal!=null && col.DataType!=null)
+                    colDict[col.ColumnName] = ((Type, int))(col.DataType, col.ColumnOrdinal);
+            }
+            
+            return new Table(ret.ToArray(),colDict);
         }
         catch (SqlException e)
         {
             Console.WriteLine(e.ToString());
         }
 
-        return r;
+        return null;
     }
-    public static object[][]? QueryFile(string filename) => CallWithFile(QueryText, filename);
+    public static Table? QueryFile(string filename) => CallWithFile(QueryText, filename);
 
 
-    public static void PrintTable(object[][]? table)
+    public static void PrintTable(Table? table)
     {
         Console.WriteLine("\n+---Querry Result---");
         if (table != null)
-            foreach (var row in table)
+            foreach (var row in table.Data)
             {
                 Console.Write("| ");
-                foreach (object data in row)
+                foreach (object data in row.Data)
                     Console.Write(data + ", ");
                 Console.WriteLine();
             }

@@ -1,11 +1,23 @@
 ﻿namespace Backend;
 
 /*Example usage
+
 using Backend;
 
 DatabaseManage.SetupDB();
-DatabaseManage.PrintTable(DatabaseManage.QueryFile("SampleQuery"));
+Table? t = DatabaseManage.QueryFile("SampleQuery");
+DatabaseManage.PrintTable(t);
 
+if (t != null)
+{
+    foreach (Row r in t)
+    {
+        int id = r.Int["TeamId"];
+        string name = r.Str["Name"];
+
+        Console.WriteLine(id + ": " + name);
+    }
+}
 
 */
 
@@ -13,7 +25,7 @@ DatabaseManage.PrintTable(DatabaseManage.QueryFile("SampleQuery"));
 public static class DatabaseManage
 {
     public static void SetupDB() => DatabaseSetup.SetupDB();
-    public static object[][]? QueryText(string sql) => DatabaseConnect.QueryText(sql);
-    public static object[][]? QueryFile(string sql) => DatabaseConnect.QueryFile(sql);
-    public static void PrintTable(object[][]? table) => DatabaseConnect.PrintTable(table);
+    public static Table? QueryText(string sql) => DatabaseConnect.QueryText(sql);
+    public static Table? QueryFile(string sql) => DatabaseConnect.QueryFile(sql);
+    public static void PrintTable(Table? table) => DatabaseConnect.PrintTable(table);
 }
