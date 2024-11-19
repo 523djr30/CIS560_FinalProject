@@ -17,8 +17,9 @@ internal static class DatabaseConnect
 
     static DatabaseConnect()
     {
-        //TODO: this is kinda hacky, but works fine for now
-        PathToBackend = "Backend";
+        //TODO: this is kind of a hacky way to find the folder with the SQL files,
+        //      but it works fine for now
+        PathToBackend = "Backend/SQL";
         for (int i = 0; i < 5; i++)
         {
             if (Directory.Exists(PathToBackend)) return;
@@ -28,6 +29,12 @@ internal static class DatabaseConnect
 
     private static SqlConnection Connect() => new(ConnectionString);
 
+    public static T CallWithFile<T>(Func<string, T> func, string filename)
+    {
+        string sql = File.ReadAllText(PathToBackend+'\\' + filename + ".sql");
+        return func.Invoke(sql);
+    }
+    
     public static int RunDmlText(string sql)
     {
         using var con = Connect();
@@ -36,12 +43,10 @@ internal static class DatabaseConnect
         Console.WriteLine(r + " rows affected");
         return r;
     }
+    public static int RunDmlFile(string filename) => CallWithFile(RunDmlText, filename);
 
-    public static int RunDmlFile(string filename)
-    {
-        string sql = File.ReadAllText(PathToBackend+'\\' + filename + ".sql");
-        return RunDmlText(sql);
-    }
+
+
 
     //prefix dates with a !, like "!2024-11-18"
     public static int InsertRows(string tableName, string colNames, object[][] data)
@@ -82,7 +87,7 @@ internal static class DatabaseConnect
 
 
     //array of rows, where each row is an array of data returned from the query
-    public static object[][]? Query(string sql)
+    public static object[][]? QueryText(string sql)
     {
         object[][]? r = null;
         try
@@ -111,13 +116,14 @@ internal static class DatabaseConnect
 
         return r;
     }
+    public static object[][]? QueryFile(string filename) => CallWithFile(QueryText, filename);
 
-    public static object[][]? QueryAndPrint(string sql)
+
+    public static void PrintTable(object[][]? table)
     {
-        object[][]? r = Query(sql);
         Console.WriteLine("\n+---Querry Result---");
-        if (r != null)
-            foreach (var row in r)
+        if (table != null)
+            foreach (var row in table)
             {
                 Console.Write("| ");
                 foreach (object data in row)
@@ -126,6 +132,5 @@ internal static class DatabaseConnect
             }
 
         Console.WriteLine("+-------------------\n");
-        return r;
     }
 }
