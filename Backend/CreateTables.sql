@@ -1,5 +1,5 @@
 IF SCHEMA_ID(N'Football') IS NULL
-    EXEC (N'CREATE SCHEMA [Football];');
+    EXEC (N'CREATE SCHEMA Football;');
 GO
 /*Table Create Order
 1:  Positions
