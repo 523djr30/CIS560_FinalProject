@@ -15,7 +15,7 @@ WITH MatchStats AS (
     WHERE (ht.Name = @TeamName1 AND at.Name = @TeamName2) OR (ht.Name = @TeamName2 AND at.Name = @TeamName1)
 )
 
-SELECT StadiumName, MatchDate AS Date, HomeTeamName, HomeTeamPoints, AwayTeamName, AwayTeamPoints,
+SELECT StadiumName, HomeTeamName, HomeTeamPoints, AwayTeamName, AwayTeamPoints, MatchDate AS Date,
     CASE
         WHEN HomeTeamPoints > AwayTeamPoints THEN HomeTeamName
         WHEN AwayTeamPoints > HomeTeamPoints THEN AwayTeamName

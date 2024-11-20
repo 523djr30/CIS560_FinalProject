@@ -16,5 +16,10 @@ namespace FootballStatsApp
         {
             InitializeComponent();
         }
+
+        private void UxSiteNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

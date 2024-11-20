@@ -13,7 +13,7 @@ WITH RecentTeamInfo AS (
     INNER JOIN Football.PlayerTeamHistory pth ON p.PlayerId = pth.PlayerId
     INNER JOIN Football.Team t ON pth.TeamId = t.TeamId
 )
-SELECT  p.PlayerId, rti.MostRecentTeamName, rti.MostRecentPlayerNumber,
+SELECT  p.PlayerId Id, rti.MostRecentTeamName Team, rti.MostRecentPlayerNumber Number,
     SUM(pms.Yards) AS TotalYards,
     SUM(pms.Points) AS TotalPoints
 FROM Football.Player p

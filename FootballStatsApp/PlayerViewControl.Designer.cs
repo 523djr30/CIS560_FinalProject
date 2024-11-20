@@ -64,7 +64,8 @@
             UxSearchTb.Name = "UxSearchTb";
             UxSearchTb.Size = new Size(285, 27);
             UxSearchTb.TabIndex = 0;
-            UxSearchTb.Text = "Enter name...";
+            UxSearchTb.Text = "Enter Player name...";
+            UxSearchTb.TextChanged += UxSearchTb_TextChanged;
             // 
             // UxSearchBtn
             // 
@@ -75,6 +76,7 @@
             UxSearchBtn.TabIndex = 1;
             UxSearchBtn.Text = "Search";
             UxSearchBtn.UseVisualStyleBackColor = true;
+            UxSearchBtn.Click += UxSearchBtn_Click;
             // 
             // UxPlayersListBox
             // 
@@ -84,6 +86,7 @@
             UxPlayersListBox.Name = "UxPlayersListBox";
             UxPlayersListBox.Size = new Size(486, 120);
             UxPlayersListBox.TabIndex = 2;
+            UxPlayersListBox.DataContextChanged += UxPlayersListBox_DataContextChanged;
             // 
             // PlayerViewControl
             // 

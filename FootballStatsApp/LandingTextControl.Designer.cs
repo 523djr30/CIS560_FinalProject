@@ -45,7 +45,7 @@
             UxLandingFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             UxLandingFlowLayoutPanel.Location = new Point(0, 0);
             UxLandingFlowLayoutPanel.Name = "UxLandingFlowLayoutPanel";
-            UxLandingFlowLayoutPanel.Size = new Size(364, 500);
+            UxLandingFlowLayoutPanel.Size = new Size(477, 500);
             UxLandingFlowLayoutPanel.TabIndex = 5;
             // 
             // UxWelcomeLabel
@@ -72,9 +72,10 @@
             UxSiteNameLabel.Font = new Font("Segoe UI", 33F);
             UxSiteNameLabel.Location = new Point(3, 70);
             UxSiteNameLabel.Name = "UxSiteNameLabel";
-            UxSiteNameLabel.Size = new Size(358, 74);
+            UxSiteNameLabel.Size = new Size(471, 74);
             UxSiteNameLabel.TabIndex = 1;
-            UxSiteNameLabel.Text = "NFLStats.com";
+            UxSiteNameLabel.Text = "Team 16 NFL stats";
+            UxSiteNameLabel.Click += UxSiteNameLabel_Click;
             // 
             // LandingTextControl
             // 
