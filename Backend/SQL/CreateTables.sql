@@ -62,7 +62,7 @@ Create Table Football.Player
 
 Create Table Football.Season
 (
-    SeasonId     int            not null identity (1, 1) primary key,
+    SeasonId     int            not null primary key,
     StartDate    DateTimeOffset not null,
     PlayoffsDate DateTimeOffset,
     EndDate      DateTimeOffset not null,

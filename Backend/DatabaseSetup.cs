@@ -12,16 +12,37 @@ internal static class DatabaseSetup
     //function since we may not want to re setup the tables every single time.
     public static void SetupDB()
     {
-        Table? testTable = DatabaseManage.QueryText("Select count(*) from Football.PlayerMatchStats");
+        Table? testTable = null;
+        try
+        {
+            testTable = DatabaseManage.QueryText("Select count(*) from Football.PlayerMatchStats");
+        }
+        catch (Exception _)
+        {
+        }
+
         int count = 0;
-        if(testTable!=null)
+        if (testTable != null)
             count = testTable[0].Int[""];
         if (count == 0)
         {
             Console.WriteLine("No data found in DB, setting up");
             ForceSetupDB();
-        }else
+        }
+        else
             Console.WriteLine("Already set up, skipping setup...");
+
+        testTable = DatabaseManage.QueryText("Select count(*) from Football.Season");
+        count = 0;
+        if (testTable != null)
+            count = testTable[0].Int[""];
+        if (count == 0)
+        {
+            Console.WriteLine("No data found in Seasons, setting up");
+            PopulateSeason();
+        }
+        else
+            Console.WriteLine("Season Already set up, skipping setup...");
     }
 
 
@@ -151,7 +172,24 @@ internal static class DatabaseSetup
         return InsertRows("Player", "PlayerId,FirstName,LastName,Bio", data);
     }
 
-    private static int PopulateSeason() => 0; //TODO
+
+//TODO: This is still temporary
+    private static int PopulateSeason()
+    {
+        List<object[]> data = [];
+        for (int i = 1970; i < 2024; i++)
+        {
+            data.Add([
+                i,
+                "!" + i + "-08-01",
+                "!" + (i + 1) + "-01-01",
+                "!" + (i + 1) + "-07-31",
+            ]);
+        }
+
+        return InsertRows("Season", "SeasonId,StartDate,PlayoffsDate,EndDate", data.ToArray());
+    }
+
     private static int PopulateDivisionMembership() => RunDmlFile("PopulateDivisionMemberships");
 
 
@@ -363,6 +401,7 @@ internal static class DatabaseSetup
                 ]);
         }
 
-        return RunDmlFileWithValueTable("PlayerId,TeamName,Date,Yards,Points", data.ToArray(), "PopulatePlayerMatchStats");
+        return RunDmlFileWithValueTable("PlayerId,TeamName,Date,Yards,Points", data.ToArray(),
+            "PopulatePlayerMatchStats");
     }
 }
