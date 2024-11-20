@@ -15,3 +15,4 @@ C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\o
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.genruntimeconfig.cache
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\ref\FootballStatsApp.dll
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingView.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.BothDivStandControl.resources
