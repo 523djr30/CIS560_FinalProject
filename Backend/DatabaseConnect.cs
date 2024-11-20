@@ -58,7 +58,7 @@ internal static class DatabaseConnect
     
     
     public static string RunDmlTextWithValueTableSqlGen(string colNames, object[][] data, string sql) =>
-        "With ValueTable as (Select * from (" + ValuesSqlGen(data) + ") as v (TeamName, StadiumName))" + sql;
+        "With ValueTable as (Select * from (" + ValuesSqlGen(data) + ") as v ("+colNames+"))" + sql;
     
     public static int RunDmlTextWithValueTable(string colNames, object[][] data, string sql)
     {
