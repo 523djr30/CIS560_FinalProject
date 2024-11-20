@@ -73,6 +73,7 @@
             teamsToolStripMenuItem.Name = "teamsToolStripMenuItem";
             teamsToolStripMenuItem.Size = new Size(65, 24);
             teamsToolStripMenuItem.Text = "Teams";
+            teamsToolStripMenuItem.Click += teamsToolStripMenuItem_Click;
             // 
             // UxLandingFlowLayoutPanel
             // 

@@ -16,7 +16,11 @@ namespace FootballStatsApp
         /// Represents player view.
         /// </summary>
         private PlayerViewControl UxPlayerViewControl = new();
-        
+        /// <summary>
+        /// Represents team view.
+        /// </summary>
+        private TeamViewControl UxTeamViewControl = new();
+
         public LandingView()
         {
             InitializeComponent();
@@ -43,6 +47,15 @@ namespace FootballStatsApp
         /// Instantiaties Player View.
         /// </summary>
         private void OpenPlayerView()
+        {
+            UxLandingFlowLayoutPanel.Controls.Clear();
+            UxLandingFlowLayoutPanel.Controls.Add(UxPlayerViewControl);
+        }
+
+        /// <summary>
+        /// Instantiaties Player View.
+        /// </summary>
+        private void OpenTeamView()
         {
             UxLandingFlowLayoutPanel.Controls.Clear();
             UxLandingFlowLayoutPanel.Controls.Add(UxPlayerViewControl);
@@ -86,6 +99,11 @@ namespace FootballStatsApp
         private void playersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenPlayerView();
+        }
+
+        private void teamsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenTeamView();
         }
     }
 }

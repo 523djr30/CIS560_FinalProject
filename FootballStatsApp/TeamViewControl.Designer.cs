@@ -29,18 +29,30 @@
         private void InitializeComponent()
         {
             flowLayoutPanel1 = new FlowLayoutPanel();
+            UxTeamViewFlowPanel = new FlowLayoutPanel();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Controls.Add(UxTeamViewFlowPanel);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.MaximumSize = new Size(1500, 1500);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(356, 356);
             flowLayoutPanel1.TabIndex = 0;
+            // 
+            // UxTeamViewFlowPanel
+            // 
+            UxTeamViewFlowPanel.Dock = DockStyle.Fill;
+            UxTeamViewFlowPanel.Location = new Point(3, 3);
+            UxTeamViewFlowPanel.Name = "UxTeamViewFlowPanel";
+            UxTeamViewFlowPanel.Size = new Size(250, 0);
+            UxTeamViewFlowPanel.TabIndex = 0;
+            UxTeamViewFlowPanel.Paint += flowLayoutPanel2_Paint;
             // 
             // TeamViewControl
             // 
@@ -49,6 +61,7 @@
             Controls.Add(flowLayoutPanel1);
             Name = "TeamViewControl";
             Size = new Size(356, 356);
+            flowLayoutPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -56,5 +69,6 @@
         #endregion
 
         private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel UxTeamViewFlowPanel;
     }
 }
