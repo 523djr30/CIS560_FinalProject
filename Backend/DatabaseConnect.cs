@@ -36,7 +36,7 @@ internal static class DatabaseConnect
         using var con = Connect();
         Server s = new(new ServerConnection(con));
         int r = s.ConnectionContext.ExecuteNonQuery(sql);
-        Console.WriteLine(r + " rows affected");
+        // Console.WriteLine(r + " rows affected");
         return r;
     }
 

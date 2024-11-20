@@ -52,11 +52,12 @@ Create Table Football.Division
 
 Create Table Football.Player
 (
-    PlayerId  int          not null identity (1, 1) primary key,
+    PlayerId  int          not null /*identity (1, 1)*/ primary key,
     FirstName NVarChar(64) not null,
     LastName  NVarChar(64) not null,
     Bio       NVarChar(512),
 );
+
 
 Create Table Football.Season
 (
@@ -66,7 +67,6 @@ Create Table Football.Season
     EndDate      DateTimeOffset not null,
 );
 Go
-
 
 --Stage 2
 Create Table Football.DivisionMembership
@@ -95,9 +95,9 @@ Create Table Football.PlayerTeamHistory
 Create Table Football.Stadium
 (
     StadiumId int          not null identity (1, 1) primary key,
-    Name      NVarChar(64) not null unique,
-    State     NVarChar(32) not null unique,
-    City      NVarChar(64) not null unique,
+    Name      NVarChar(64) not null,
+    State     NVarChar(32) not null,
+    City      NVarChar(64) not null,
     TeamID    int foreign key references Football.Team (TeamId),
 );
 GO

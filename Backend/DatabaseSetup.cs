@@ -53,8 +53,7 @@ internal static class DatabaseSetup
         foreach (var func in PopulateMethods)
         {
             int affectedRows = func.Invoke();
-            if (affectedRows <= 0)
-                Console.WriteLine("Table may not have been populated by "+func.Method.Name);
+            Console.WriteLine(affectedRows+" rows affected by "+func.Method.Name);
             sum += affectedRows;
         }
 
@@ -128,15 +127,15 @@ internal static class DatabaseSetup
         for (int i = 0; i < profiles.Count; i++)
         {
             FileManager.PlayerProfile p = profiles[i];
-            data[i] = [p.FirstName,p.LastName,p.bio];
+            data[i] = [p.player_id, p.FirstName,p.LastName,p.bio];
         }
 
-        return InsertRows("Player", "FirstName,LastName,Bio",data);
+        return InsertRows("Player", "PlayerId,FirstName,LastName,Bio",data);
     }
-    private static int PopulateSeason()=>0;             //TODO: not implemented.
+    private static int PopulateSeason()=> 0;
     private static int PopulateDivisionMembership()=>0; //TODO: not implemented.
     private static int PopulatePlayerTeamHistory()=>0;  //TODO: not implemented.
-    private static int PopulateStadium()=>0;            //TODO: not implemented.
+    private static int PopulateStadium()=>RunDmlFile("PopulateStadiums");
     private static int PopulateMatch()=>0;              //TODO: not implemented.
     private static int PopulatePlayerMatchStats()=>0;   //TODO: not implemented.
 }
