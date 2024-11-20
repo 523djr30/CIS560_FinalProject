@@ -18,3 +18,7 @@ C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\o
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.BothDivStandControl.resources
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.DivStandControl.resources
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingTextControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerSelectedControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerViewControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamViewControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamCardControl.resources

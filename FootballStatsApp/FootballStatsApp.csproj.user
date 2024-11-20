@@ -13,5 +13,17 @@
     <Compile Update="LandingView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="PlayerSelectedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PlayerViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TeamCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TeamViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -34,10 +34,7 @@
             playersToolStripMenuItem = new ToolStripMenuItem();
             teamsToolStripMenuItem = new ToolStripMenuItem();
             UxLandingFlowLayoutPanel = new FlowLayoutPanel();
-            UxLandingTextControl = new LandingTextControl();
-            UxBothDivControl = new BothDivStandControl();
             UxLandingMenuStrip.SuspendLayout();
-            UxLandingFlowLayoutPanel.SuspendLayout();
             SuspendLayout();
             // 
             // UxLandingMenuStrip
@@ -69,6 +66,7 @@
             playersToolStripMenuItem.Name = "playersToolStripMenuItem";
             playersToolStripMenuItem.Size = new Size(69, 24);
             playersToolStripMenuItem.Text = "Players";
+            playersToolStripMenuItem.Click += playersToolStripMenuItem_Click;
             // 
             // teamsToolStripMenuItem
             // 
@@ -80,35 +78,20 @@
             // 
             UxLandingFlowLayoutPanel.AutoScroll = true;
             UxLandingFlowLayoutPanel.AutoSize = true;
-            UxLandingFlowLayoutPanel.Controls.Add(UxLandingTextControl);
-            UxLandingFlowLayoutPanel.Controls.Add(UxBothDivControl);
             UxLandingFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             UxLandingFlowLayoutPanel.Location = new Point(12, 31);
+            UxLandingFlowLayoutPanel.MaximumSize = new Size(2000, 2000);
+            UxLandingFlowLayoutPanel.MinimumSize = new Size(500, 500);
             UxLandingFlowLayoutPanel.Name = "UxLandingFlowLayoutPanel";
-            UxLandingFlowLayoutPanel.Size = new Size(1256, 837);
+            UxLandingFlowLayoutPanel.Size = new Size(958, 500);
             UxLandingFlowLayoutPanel.TabIndex = 2;
-            // 
-            // UxLandingTextControl
-            // 
-            UxLandingTextControl.Location = new Point(3, 3);
-            UxLandingTextControl.Name = "UxLandingTextControl";
-            UxLandingTextControl.Size = new Size(500, 200);
-            UxLandingTextControl.TabIndex = 0;
-            // 
-            // UxBothDivControl
-            // 
-            UxBothDivControl.Location = new Point(3, 209);
-            UxBothDivControl.MinimumSize = new Size(1000, 500);
-            UxBothDivControl.Name = "UxBothDivControl";
-            UxBothDivControl.Size = new Size(1250, 625);
-            UxBothDivControl.TabIndex = 1;
             // 
             // LandingView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(982, 453);
+            ClientSize = new Size(982, 547);
             Controls.Add(UxLandingFlowLayoutPanel);
             Controls.Add(UxLandingMenuStrip);
             MainMenuStrip = UxLandingMenuStrip;
@@ -117,7 +100,6 @@
             Load += LandingView_Load;
             UxLandingMenuStrip.ResumeLayout(false);
             UxLandingMenuStrip.PerformLayout();
-            UxLandingFlowLayoutPanel.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,7 +111,5 @@
         private ToolStripMenuItem playersToolStripMenuItem;
         private ToolStripMenuItem teamsToolStripMenuItem;
         private FlowLayoutPanel UxLandingFlowLayoutPanel;
-        private LandingTextControl UxLandingTextControl;
-        private BothDivStandControl UxBothDivControl;
     }
 }
