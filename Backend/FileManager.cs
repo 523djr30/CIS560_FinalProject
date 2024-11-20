@@ -127,7 +127,7 @@ internal static class FileManager
         public string team, opponent;
         public string date;
         public char game_location; //H or A for home/away
-        public int player_id, player_team_score;
+        public int player_id, player_team_score,rushing_yards;
     }
 
 

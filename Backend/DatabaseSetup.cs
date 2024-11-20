@@ -10,7 +10,19 @@ using static DatabaseConnect;
 internal static class DatabaseSetup
 {
     //function since we may not want to re setup the tables every single time.
-    public static void SetupDB() => ForceSetupDB();
+    public static void SetupDB()
+    {
+        Table? testTable = DatabaseManage.QueryText("Select count(*) from Football.PlayerMatchStats");
+        int count = 0;
+        if(testTable!=null)
+            count = testTable[0].Int[""];
+        if (count == 0)
+        {
+            Console.WriteLine("No data found in DB, setting up");
+            ForceSetupDB();
+        }else
+            Console.WriteLine("Already set up, skipping setup...");
+    }
 
 
     public static void ForceSetupDB()
@@ -328,9 +340,29 @@ internal static class DatabaseSetup
                     data.Add(['!' + date, FileManager.DeAbbreviateTeam(home), FileManager.DeAbbreviateTeam(away)]);
             }
         }
-        
+
         return RunDmlFileWithValueTable("Date,HomeTeamName,AwayTeamName", data.ToArray(), "PopulateMatches");
     }
 
-    private static int PopulatePlayerMatchStats() => 0; //TODO: not implemented.
+    private static int PopulatePlayerMatchStats()
+    {
+        List<FileManager.PlayerMatchData> dataList = FileManager.GetPlayerMatchStats();
+
+        List<object[]> data = [];
+        foreach (var row in dataList)
+        {
+            //PlayerId,TeamName,Date,Yards,Points
+
+            if (FileManager.ValidAbbreviation(row.team))
+                data.Add([
+                    row.player_id,
+                    FileManager.DeAbbreviateTeam(row.team),
+                    '!' + row.date,
+                    row.rushing_yards,
+                    row.player_team_score
+                ]);
+        }
+
+        return RunDmlFileWithValueTable("PlayerId,TeamName,Date,Yards,Points", data.ToArray(), "PopulatePlayerMatchStats");
+    }
 }
