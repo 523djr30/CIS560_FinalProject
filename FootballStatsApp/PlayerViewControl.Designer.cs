@@ -32,7 +32,7 @@
             UxSearchFlowLayoutPanel = new FlowLayoutPanel();
             UxSearchTb = new TextBox();
             UxSearchBtn = new Button();
-            UxPlayersListView = new ListView();
+            UxPlayersListBox = new ListBox();
             UxPlayerViewFlowLayoutPanel.SuspendLayout();
             UxSearchFlowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -41,7 +41,7 @@
             // 
             UxPlayerViewFlowLayoutPanel.AutoSize = true;
             UxPlayerViewFlowLayoutPanel.Controls.Add(UxSearchFlowLayoutPanel);
-            UxPlayerViewFlowLayoutPanel.Controls.Add(UxPlayersListView);
+            UxPlayerViewFlowLayoutPanel.Controls.Add(UxPlayersListBox);
             UxPlayerViewFlowLayoutPanel.Dock = DockStyle.Fill;
             UxPlayerViewFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
             UxPlayerViewFlowLayoutPanel.Location = new Point(0, 0);
@@ -76,14 +76,14 @@
             UxSearchBtn.Text = "Search";
             UxSearchBtn.UseVisualStyleBackColor = true;
             // 
-            // UxPlayersListView
+            // UxPlayersListBox
             // 
-            UxPlayersListView.Dock = DockStyle.Fill;
-            UxPlayersListView.Location = new Point(3, 66);
-            UxPlayersListView.Name = "UxPlayersListView";
-            UxPlayersListView.Size = new Size(486, 121);
-            UxPlayersListView.TabIndex = 1;
-            UxPlayersListView.UseCompatibleStateImageBehavior = false;
+            UxPlayersListBox.Dock = DockStyle.Fill;
+            UxPlayersListBox.FormattingEnabled = true;
+            UxPlayersListBox.Location = new Point(3, 66);
+            UxPlayersListBox.Name = "UxPlayersListBox";
+            UxPlayersListBox.Size = new Size(486, 120);
+            UxPlayersListBox.TabIndex = 2;
             // 
             // PlayerViewControl
             // 
@@ -105,6 +105,6 @@
         private FlowLayoutPanel UxSearchFlowLayoutPanel;
         private TextBox UxSearchTb;
         private Button UxSearchBtn;
-        private ListView UxPlayersListView;
+        private ListBox UxPlayersListBox;
     }
 }
