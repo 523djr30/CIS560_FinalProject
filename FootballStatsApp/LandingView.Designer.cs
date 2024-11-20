@@ -28,87 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            PlayerBtn = new Button();
-            TeamBtn = new Button();
-            SeasonBtn = new Button();
-            tableLayoutPanel1.SuspendLayout();
+            UxLandingMenuStrip = new MenuStrip();
+            homeToolStripMenuItem = new ToolStripMenuItem();
+            standingToolStripMenuItem = new ToolStripMenuItem();
+            playersToolStripMenuItem = new ToolStripMenuItem();
+            teamsToolStripMenuItem = new ToolStripMenuItem();
+            UxLandingFlowLayoutPanel = new FlowLayoutPanel();
+            UxLandingMenuStrip.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
+            // UxLandingMenuStrip
             // 
-            tableLayoutPanel1.ColumnCount = 3;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 304F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(PlayerBtn, 1, 1);
-            tableLayoutPanel1.Controls.Add(TeamBtn, 1, 3);
-            tableLayoutPanel1.Controls.Add(SeasonBtn, 1, 5);
-            tableLayoutPanel1.Dock = DockStyle.Fill;
-            tableLayoutPanel1.Location = new Point(0, 0);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 7;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 75F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 75F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 75F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 25F));
-            tableLayoutPanel1.Size = new Size(518, 376);
-            tableLayoutPanel1.TabIndex = 4;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
+            UxLandingMenuStrip.ImageScalingSize = new Size(20, 20);
+            UxLandingMenuStrip.Items.AddRange(new ToolStripItem[] { homeToolStripMenuItem, standingToolStripMenuItem, playersToolStripMenuItem, teamsToolStripMenuItem });
+            UxLandingMenuStrip.Location = new Point(0, 0);
+            UxLandingMenuStrip.Name = "UxLandingMenuStrip";
+            UxLandingMenuStrip.Size = new Size(982, 28);
+            UxLandingMenuStrip.TabIndex = 1;
+            UxLandingMenuStrip.Text = "menuStrip1";
             // 
-            // PlayerBtn
+            // homeToolStripMenuItem
             // 
-            PlayerBtn.Dock = DockStyle.Fill;
-            PlayerBtn.Font = new Font("Segoe UI", 17F);
-            PlayerBtn.Location = new Point(105, 31);
-            PlayerBtn.Name = "PlayerBtn";
-            PlayerBtn.Size = new Size(306, 80);
-            PlayerBtn.TabIndex = 0;
-            PlayerBtn.Text = "Player";
-            PlayerBtn.UseVisualStyleBackColor = true;
+            homeToolStripMenuItem.Name = "homeToolStripMenuItem";
+            homeToolStripMenuItem.Size = new Size(64, 24);
+            homeToolStripMenuItem.Text = "Home";
+            homeToolStripMenuItem.Click += homeToolStripMenuItem_Click;
             // 
-            // TeamBtn
+            // standingToolStripMenuItem
             // 
-            TeamBtn.Dock = DockStyle.Fill;
-            TeamBtn.Font = new Font("Segoe UI", 17F);
-            TeamBtn.Location = new Point(105, 145);
-            TeamBtn.Name = "TeamBtn";
-            TeamBtn.Size = new Size(306, 80);
-            TeamBtn.TabIndex = 1;
-            TeamBtn.Text = "Team";
-            TeamBtn.UseVisualStyleBackColor = true;
+            standingToolStripMenuItem.Name = "standingToolStripMenuItem";
+            standingToolStripMenuItem.Size = new Size(88, 24);
+            standingToolStripMenuItem.Text = "Standings";
+            standingToolStripMenuItem.Click += standingToolStripMenuItem_Click;
             // 
-            // SeasonBtn
+            // playersToolStripMenuItem
             // 
-            SeasonBtn.Dock = DockStyle.Fill;
-            SeasonBtn.Font = new Font("Segoe UI", 17F);
-            SeasonBtn.Location = new Point(105, 259);
-            SeasonBtn.Name = "SeasonBtn";
-            SeasonBtn.Size = new Size(306, 80);
-            SeasonBtn.TabIndex = 2;
-            SeasonBtn.Text = "Season";
-            SeasonBtn.UseVisualStyleBackColor = true;
+            playersToolStripMenuItem.Name = "playersToolStripMenuItem";
+            playersToolStripMenuItem.Size = new Size(69, 24);
+            playersToolStripMenuItem.Text = "Players";
+            playersToolStripMenuItem.Click += playersToolStripMenuItem_Click;
+            // 
+            // teamsToolStripMenuItem
+            // 
+            teamsToolStripMenuItem.Name = "teamsToolStripMenuItem";
+            teamsToolStripMenuItem.Size = new Size(65, 24);
+            teamsToolStripMenuItem.Text = "Teams";
+            teamsToolStripMenuItem.Click += teamsToolStripMenuItem_Click;
+            // 
+            // UxLandingFlowLayoutPanel
+            // 
+            UxLandingFlowLayoutPanel.AutoScroll = true;
+            UxLandingFlowLayoutPanel.AutoSize = true;
+            UxLandingFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
+            UxLandingFlowLayoutPanel.Location = new Point(12, 31);
+            UxLandingFlowLayoutPanel.MaximumSize = new Size(2000, 2000);
+            UxLandingFlowLayoutPanel.MinimumSize = new Size(500, 500);
+            UxLandingFlowLayoutPanel.Name = "UxLandingFlowLayoutPanel";
+            UxLandingFlowLayoutPanel.Size = new Size(958, 500);
+            UxLandingFlowLayoutPanel.TabIndex = 2;
             // 
             // LandingView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(518, 376);
-            Controls.Add(tableLayoutPanel1);
+            AutoSize = true;
+            ClientSize = new Size(982, 547);
+            Controls.Add(UxLandingFlowLayoutPanel);
+            Controls.Add(UxLandingMenuStrip);
+            MainMenuStrip = UxLandingMenuStrip;
             Name = "LandingView";
-            Text = "Form1";
-            tableLayoutPanel1.ResumeLayout(false);
+            Text = "NFL Stats App";
+            Load += LandingView_Load;
+            UxLandingMenuStrip.ResumeLayout(false);
+            UxLandingMenuStrip.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private TableLayoutPanel tableLayoutPanel1;
-        private Button PlayerBtn;
-        private Button TeamBtn;
-        private Button SeasonBtn;
+        private MenuStrip UxLandingMenuStrip;
+        private ToolStripMenuItem homeToolStripMenuItem;
+        private ToolStripMenuItem standingToolStripMenuItem;
+        private ToolStripMenuItem playersToolStripMenuItem;
+        private ToolStripMenuItem teamsToolStripMenuItem;
+        private FlowLayoutPanel UxLandingFlowLayoutPanel;
     }
 }

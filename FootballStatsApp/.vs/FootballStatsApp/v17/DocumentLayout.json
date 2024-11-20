@@ -38,45 +38,40 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LandingView.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
               "RelativeDocumentMoniker": "LandingView.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs [Design]*",
-              "RelativeToolTip": "LandingView.cs [Design]*",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs [Design]",
+              "RelativeToolTip": "LandingView.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T02:09:31.45Z",
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "LandingView.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
               "RelativeDocumentMoniker": "LandingView.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs*",
-              "RelativeToolTip": "LandingView.cs*",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "RelativeToolTip": "LandingView.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T01:51:37.067Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T01:51:37.067Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LandingView.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.Designer.cs",
               "RelativeDocumentMoniker": "LandingView.Designer.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.Designer.cs*",
-              "RelativeToolTip": "LandingView.Designer.cs*",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.Designer.cs",
+              "RelativeToolTip": "LandingView.Designer.cs",
               "ViewState": "AgIAAB8AAAAAAAAAAAAIwDgAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-14T01:51:31.838Z",
@@ -92,8 +87,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-14T01:51:24.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-14T01:51:24.93Z"
             }
           ]
         }

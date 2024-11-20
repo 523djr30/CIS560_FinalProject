@@ -1,8 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="BothDivStandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="DivStandControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="LandingTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="LandingView.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PlayerSelectedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="PlayerViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TeamCardControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TeamViewControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 </Project>
