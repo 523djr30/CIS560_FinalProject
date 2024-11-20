@@ -77,46 +77,50 @@ internal static class DatabaseSetup
         ["P","Punter"]
     ]);
     
-    private static int PopulateTeam()=>InsertRows("Team","State,Name",[
-        ["State Unknown","Buffalo Bills"],
-        ["State Unknown","Miami Dolphins"],
-        ["State Unknown","New England Patriots"],
-        ["State Unknown","New York Jets"],
-        ["State Unknown","Baltimore Ravens"],
-        ["State Unknown","Cincinnati Bengals"],
-        ["State Unknown","Cleveland Browns"],
-        ["State Unknown","Pittsburgh Steelers"],
-        ["State Unknown","Houston Texans"],
-        ["State Unknown","Indianapolis Colts"],
-        ["State Unknown","Jacksonville Jaguars"],
-        ["State Unknown","Tennessee Titans"],
-        ["State Unknown","Denver Broncos"],
-        ["State Unknown","Kansas City Chiefs"],
-        ["State Unknown","Las Vegas Raiders"],
-        ["State Unknown","Los Angeles Chargers"],
-        ["State Unknown","Dallas Cowboys"],
-        ["State Unknown","New York Giants"],
-        ["State Unknown","Philadelphia Eagles"],
-        ["State Unknown","Washington Commanders"],
-        ["State Unknown","Chicago Bears"],
-        ["State Unknown","Detroit Lions"],
-        ["State Unknown","Green Bay Packers"],
-        ["State Unknown","Minnesota Vikings"],
-        ["State Unknown","Atlanta Falcons"],
-        ["State Unknown","Carolina Panthers"],
-        ["State Unknown","New Orleans Saints"],
-        ["State Unknown","Tampa Bay Buccaneers"],
-        ["State Unknown","Arizona Cardinals"],
-        ["State Unknown","Los Angeles Rams"],
-        ["State Unknown","San Francisco 49ers"],
-        ["State Unknown","Seattle Seahawks"]
+    private static int PopulateTeam()=>InsertRows("Team","State,City,Name",[
+        ["State Unknown","Buffalo","Bills"],
+        ["State Unknown","Miami","Dolphins"],
+        ["State Unknown","New England","Patriots"],
+        ["State Unknown","New York","Jets"],
+        ["State Unknown","Baltimore","Ravens"],
+        ["State Unknown","Cincinnati","Bengals"],
+        ["State Unknown","Cleveland","Browns"],
+        ["State Unknown","Pittsburgh","Steelers"],
+        ["State Unknown","Houston","Texans"],
+        ["State Unknown","Indianapolis","Colts"],
+        ["State Unknown","Jacksonville","Jaguars"],
+        ["State Unknown","Tennessee","Titans"],
+        ["State Unknown","Denver","Broncos"],
+        ["State Unknown","Kansas City","Chiefs"],
+        ["State Unknown","Las Vegas","Raiders"],
+        ["State Unknown","Los Angeles","Chargers"],
+        ["State Unknown","Dallas","Cowboys"],
+        ["State Unknown","New York","Giants"],
+        ["State Unknown","Philadelphia","Eagles"],
+        ["State Unknown","Washington","Commanders"],
+        ["State Unknown","Chicago","Bears"],
+        ["State Unknown","Detroit","Lions"],
+        ["State Unknown","Green Bay","Packers"],
+        ["State Unknown","Minnesota","Vikings"],
+        ["State Unknown","Atlanta","Falcons"],
+        ["State Unknown","Carolina","Panthers"],
+        ["State Unknown","New Orleans","Saints"],
+        ["State Unknown","Tampa Bay","Buccaneers"],
+        ["State Unknown","Arizona","Cardinals"],
+        ["State Unknown","Los Angeles","Rams"],
+        ["State Unknown","San Francisco","49ers"],
+        ["State Unknown","Seattle","Seahawks"]
     ]);
     
     private static int PopulateDivision()=>InsertRows("Division","Name",[
         ["AFC NORTH"],
         ["AFC EAST"],
         ["AFC SOUTH"],
-        ["AFC WEST"]
+        ["AFC WEST"],
+        ["NFC NORTH"],
+        ["NFC EAST"],
+        ["NFC SOUTH"],
+        ["NFC WEST"]
     ]);
 
     private static int PopulatePlayer()
@@ -132,8 +136,12 @@ internal static class DatabaseSetup
 
         return InsertRows("Player", "PlayerId,FirstName,LastName,Bio",data);
     }
+    
     private static int PopulateSeason()=> 0;
-    private static int PopulateDivisionMembership()=>0; //TODO: not implemented.
+    private static int PopulateDivisionMembership()=>RunDmlFile("PopulateDivisionMemberships");
+
+
+    
     private static int PopulatePlayerTeamHistory()=>0;  //TODO: not implemented.
     private static int PopulateStadium()=>RunDmlFile("PopulateStadiums");
     private static int PopulateMatch()=>0;              //TODO: not implemented.

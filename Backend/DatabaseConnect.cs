@@ -42,30 +42,51 @@ internal static class DatabaseConnect
 
     public static int RunDmlFile(string filename) => CallWithFile(RunDmlText, filename);
 
-
-    //prefix dates with a !, like "!2024-11-18"
-    public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data) =>
-        "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO\n";
-
-    public static int InsertRows(string tableName, string colNames, object[][] data)
+    
+    public static int ChunkifyOperation(Func<object[][],int> op,object[][] data, int chunkSize)
     {
-        if (data.Length < 500)
-            return RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
-
         int sum = 0;
         for (int i = 0; i < data.Length;)
         {
-            int nextI = i + 500;
-            if (nextI > data.Length)
-                nextI = data.Length;
-            
-            sum+=InsertRows(tableName,colNames,data[i..(nextI-1)]);
+            int nextI = Math.Min(i + chunkSize,data.Length);
+            sum+=op.Invoke(data[i..(nextI-1)]);
             i = nextI;
         }
 
         return sum;
     }
+    
+    
+    public static string RunDmlTextWithValueTableSqlGen(string colNames, object[][] data, string sql) =>
+        "With ValueTable as (Select * from (" + ValuesSqlGen(data) + ") as v (TeamName, StadiumName))" + sql;
+    
+    public static int RunDmlTextWithValueTable(string colNames, object[][] data, string sql)
+    {
+        if (data.Length > 500)
+            return ChunkifyOperation((d)=>RunDmlTextWithValueTable(colNames,d,sql),data,500);
+        
+        return RunDmlText(RunDmlTextWithValueTableSqlGen(colNames,data,sql));
+    }
 
+    public static int RunDmlFileWithValueTable(string colNames, object[][] data, string filename)
+    {
+        string sql = File.ReadAllText(FileManager.SqlPath + filename + ".sql");
+        return RunDmlTextWithValueTable(colNames, data, sql);
+    }
+    
+   
+    
+    public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data) =>
+        "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO\n";
+
+    public static int InsertRows(string tableName, string colNames, object[][] data)
+    {
+        if (data.Length > 500)
+            return ChunkifyOperation((d)=>InsertRows(tableName,colNames,d),data,500);
+        return RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
+    }
+
+    //prefix dates with a !, like "!2024-11-18"
     public static string ValuesSqlGen(object[][] data)
     {
         StringBuilder sb = new("Values\n");

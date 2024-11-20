@@ -42,6 +42,7 @@ Create Table Football.Team
     TeamId int          not null identity (1, 1) primary key,
     Name   NVarChar(64) not null unique,
     State  NVarChar(32) not null,
+    City  NVarChar(32) not null,
 );
 
 Create Table Football.Division
