@@ -7,6 +7,9 @@
     <Compile Update="DivStandControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="LandingTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="LandingView.cs">
       <SubType>Form</SubType>
     </Compile>

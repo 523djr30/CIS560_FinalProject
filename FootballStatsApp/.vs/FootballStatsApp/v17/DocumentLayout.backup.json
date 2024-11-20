@@ -3,12 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\bothdivstandcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:bothdivstandcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\landingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:landingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\landingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:landingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\divstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:divstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\bothdivstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:bothdivstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\bothdivstandcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:bothdivstandcontrol.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\divstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:divstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\bothdivstandcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -35,19 +51,69 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "LandingView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "RelativeDocumentMoniker": "LandingView.cs",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs [Design]",
+              "RelativeToolTip": "LandingView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:06:42.875Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LandingView.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "RelativeDocumentMoniker": "LandingView.cs",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\LandingView.cs",
+              "RelativeToolTip": "LandingView.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T03:06:41.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DivStandControl.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\DivStandControl.cs",
+              "RelativeDocumentMoniker": "DivStandControl.cs",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\DivStandControl.cs",
+              "RelativeToolTip": "DivStandControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T01:27:22.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DivStandControl.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\DivStandControl.cs",
+              "RelativeDocumentMoniker": "DivStandControl.cs",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\DivStandControl.cs [Design]",
+              "RelativeToolTip": "DivStandControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T01:25:41.399Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "BothDivStandControl.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\BothDivStandControl.Designer.cs",
               "RelativeDocumentMoniker": "BothDivStandControl.Designer.cs",
               "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\BothDivStandControl.Designer.cs",
               "RelativeToolTip": "BothDivStandControl.Designer.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAQwCcAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwDIAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T01:17:57.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "BothDivStandControl.cs",
               "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\BothDivStandControl.cs",
               "RelativeDocumentMoniker": "BothDivStandControl.cs",
@@ -60,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BothDivStandControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\BothDivStandControl.cs",
               "RelativeDocumentMoniker": "BothDivStandControl.cs",

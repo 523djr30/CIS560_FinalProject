@@ -21,7 +21,7 @@ namespace FootballStatsApp
         public DivStandControl(string DivName)
         {
             DivisionName = DivName;
-            UxDivNameLabel.Text = DivisionName + "Standings";
+            UxDivNameLabel.Text = DivisionName + " Standings";
 
             InitializeComponent();
         }

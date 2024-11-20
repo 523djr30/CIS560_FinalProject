@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FootballStatsApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a174f5cc5c0a462403b3601ff7d95547f4b7479")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c0c1dcc7a1332f523c5482527e4c992dee47eb49")]
 [assembly: System.Reflection.AssemblyProductAttribute("FootballStatsApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FootballStatsApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
