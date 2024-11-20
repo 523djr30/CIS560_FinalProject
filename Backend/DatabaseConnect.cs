@@ -13,7 +13,11 @@ namespace Backend;
 internal static class DatabaseConnect
 {
     private const string ConnectionString = "Server=(localdb)\\MSSQLLocalDB; Integrated Security=true";
-    
+
+    public static string Sanitize(string s)
+    {
+        return s.Replace('\'', ' ').Replace('\"', ' ');
+    }
 
     public static T CallWithFile<T>(Func<string, T> func, string filename)
     {
@@ -28,6 +32,7 @@ internal static class DatabaseConnect
 
     public static int RunDmlText(string sql)
     {
+        // Console.WriteLine(sql);
         using var con = Connect();
         Server s = new(new ServerConnection(con));
         int r = s.ConnectionContext.ExecuteNonQuery(sql);
@@ -40,7 +45,26 @@ internal static class DatabaseConnect
 
     //prefix dates with a !, like "!2024-11-18"
     public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data) =>
-        "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO";
+        "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO\n";
+
+    public static int InsertRows(string tableName, string colNames, object[][] data)
+    {
+        if (data.Length < 500)
+            return RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
+
+        int sum = 0;
+        for (int i = 0; i < data.Length;)
+        {
+            int nextI = i + 500;
+            if (nextI > data.Length)
+                nextI = data.Length;
+            
+            sum+=InsertRows(tableName,colNames,data[i..(nextI-1)]);
+            i = nextI;
+        }
+
+        return sum;
+    }
 
     public static string ValuesSqlGen(object[][] data)
     {
@@ -53,13 +77,14 @@ internal static class DatabaseConnect
             bool firstCol = true;
             foreach (object d in row)
             {
+                if (!firstCol)
+                    sb.Append(',');
+                firstCol = false;
+
                 if (d is int dI)
                     sb.Append(dI); //int
                 else if (d is string dS)
                 {
-                    if (!firstCol)
-                        sb.Append(',');
-                    firstCol = false;
                     if (dS.Length > 0 && dS[0] == '!')
                         sb.Append('\'').Append(dS.Substring(1)); //date
                     else
@@ -74,8 +99,7 @@ internal static class DatabaseConnect
         return sb.ToString();
     }
 
-    public static int InsertRows(string tableName, string colNames, object[][] data) =>
-        RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
+    
 
 
     //array of rows, where each row is an array of data returned from the query

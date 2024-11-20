@@ -82,28 +82,29 @@ internal static class FileManager
         public string bio = ""; //TODO fluff out
     }
 
-    public static List<PlayerProfile> getBios()
+    public static List<PlayerProfile> GetPlayerProfiles()
     {
         string json = ReadJsonFile("profiles");
         List<PlayerProfile>? biosList = JsonConvert.DeserializeObject<List<PlayerProfile>>(json);
-        foreach (PlayerProfile p in biosList)
-        {
-            int split = p.Name.IndexOf(' ');
-            if (split == -1)
+        if(biosList!=null)
+            foreach (PlayerProfile p in biosList)
             {
-                p.FirstName = p.Name;
-                p.LastName = "";
-            }
-            else
-            {
-                p.FirstName = p.Name.Substring(0, split);
-                p.LastName = p.Name.Substring(1 + split);
-            }
+                int split = p.Name.IndexOf(' ');
+                if (split == -1)
+                {
+                    p.FirstName = p.Name.Trim();
+                    p.LastName = "";
+                }
+                else
+                {
+                    p.FirstName = DatabaseConnect.Sanitize(p.Name.Substring(0, split));
+                    p.LastName = DatabaseConnect.Sanitize(p.Name.Substring(1 + split));
+                }
 
-            p.bio = "Born: " + p.birth_date +
-                    "\nHeight: " + p.height +
-                    "\nWeight: " + p.weight; //TODO potentially more biographical data
-        }
+                p.bio = "Born: " + p.birth_date +
+                        "    Height: " + p.height +
+                        "    Weight: " + p.weight; //TODO potentially more biographical data
+            }
 
         return biosList;
     }

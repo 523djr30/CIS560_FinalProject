@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Backend;
 
@@ -121,8 +122,16 @@ internal static class DatabaseSetup
 
     private static int PopulatePlayer()
     {
-        FileManager.getBios();
-        return 0;
+        Console.WriteLine("Processing Profiles");
+        List<FileManager.PlayerProfile> profiles = FileManager.GetPlayerProfiles();
+        object[][] data = new object[profiles.Count][];
+        for (int i = 0; i < profiles.Count; i++)
+        {
+            FileManager.PlayerProfile p = profiles[i];
+            data[i] = [p.FirstName,p.LastName,p.bio];
+        }
+
+        return InsertRows("Player", "FirstName,LastName,Bio",data);
     }
     private static int PopulateSeason()=>0;             //TODO: not implemented.
     private static int PopulateDivisionMembership()=>0; //TODO: not implemented.
