@@ -124,7 +124,7 @@ Create Table Football.PlayerMatchStats
     PlayerTeamHistoryId int not null foreign key references Football.PlayerTeamHistory (PlayerTeamHistoryId),
     MatchId             int not null foreign key references Football.Match (MatchId),
     unique (PlayerTeamHistoryId, MatchId),
-    TeamID              int foreign key references Football.Team (TeamId), --TODO consider if this is really necessary
+    TeamID              int foreign key references Football.Team (TeamId),
     Yards               int,
     Points              int,
     --TODO more stats
