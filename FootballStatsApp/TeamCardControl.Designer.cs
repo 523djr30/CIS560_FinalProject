@@ -30,7 +30,8 @@
         {
             UxTableLayout = new TableLayoutPanel();
             UxTeamNameLabel = new Label();
-            UxStadiumLabel = new Label();
+            UxAllMatchesBtn = new Button();
+            UxStatsBySeasonBtn = new Button();
             UxWinsFlowPanel = new FlowLayoutPanel();
             WinLabel = new Label();
             UxNumWinLabel = new Label();
@@ -41,8 +42,6 @@
             UxCityLocLabel = new Label();
             UxStartDateLabel = new Label();
             UxDivisionNameLabel = new Label();
-            UxAllMatchesBtn = new Button();
-            UxStatsBySeasonBtn = new Button();
             UxRosterButton = new Button();
             UxTableLayout.SuspendLayout();
             UxWinsFlowPanel.SuspendLayout();
@@ -86,14 +85,25 @@
             UxTeamNameLabel.Text = "TeamName";
             UxTeamNameLabel.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // UxStadiumLabel
+            // UxAllMatchesBtn
             // 
-            UxStadiumLabel.AutoSize = true;
-            UxStadiumLabel.Location = new Point(3, 0);
-            UxStadiumLabel.Name = "UxStadiumLabel";
-            UxStadiumLabel.Size = new Size(64, 20);
-            UxStadiumLabel.TabIndex = 1;
-            UxStadiumLabel.Text = "Stadium";
+            UxAllMatchesBtn.Dock = DockStyle.Fill;
+            UxAllMatchesBtn.Location = new Point(3, 152);
+            UxAllMatchesBtn.Name = "UxAllMatchesBtn";
+            UxAllMatchesBtn.Size = new Size(250, 45);
+            UxAllMatchesBtn.TabIndex = 9;
+            UxAllMatchesBtn.Text = "Display All Matches";
+            UxAllMatchesBtn.UseVisualStyleBackColor = true;
+            // 
+            // UxStatsBySeasonBtn
+            // 
+            UxStatsBySeasonBtn.Dock = DockStyle.Fill;
+            UxStatsBySeasonBtn.Location = new Point(259, 152);
+            UxStatsBySeasonBtn.Name = "UxStatsBySeasonBtn";
+            UxStatsBySeasonBtn.Size = new Size(250, 45);
+            UxStatsBySeasonBtn.TabIndex = 10;
+            UxStatsBySeasonBtn.Text = "Stats By Season";
+            UxStatsBySeasonBtn.UseVisualStyleBackColor = true;
             // 
             // UxWinsFlowPanel
             // 
@@ -158,7 +168,6 @@
             // 
             // UxInfoFlowPanel
             // 
-            UxInfoFlowPanel.Controls.Add(UxStadiumLabel);
             UxInfoFlowPanel.Controls.Add(UxCityLocLabel);
             UxInfoFlowPanel.Controls.Add(UxStartDateLabel);
             UxInfoFlowPanel.Controls.Add(UxDivisionNameLabel);
@@ -171,7 +180,7 @@
             // UxCityLocLabel
             // 
             UxCityLocLabel.AutoSize = true;
-            UxCityLocLabel.Location = new Point(3, 20);
+            UxCityLocLabel.Location = new Point(3, 0);
             UxCityLocLabel.Name = "UxCityLocLabel";
             UxCityLocLabel.Size = new Size(34, 20);
             UxCityLocLabel.TabIndex = 2;
@@ -180,7 +189,7 @@
             // UxStartDateLabel
             // 
             UxStartDateLabel.AutoSize = true;
-            UxStartDateLabel.Location = new Point(3, 40);
+            UxStartDateLabel.Location = new Point(3, 20);
             UxStartDateLabel.Name = "UxStartDateLabel";
             UxStartDateLabel.Size = new Size(102, 20);
             UxStartDateLabel.TabIndex = 3;
@@ -189,31 +198,11 @@
             // UxDivisionNameLabel
             // 
             UxDivisionNameLabel.AutoSize = true;
-            UxDivisionNameLabel.Location = new Point(3, 60);
+            UxDivisionNameLabel.Location = new Point(3, 40);
             UxDivisionNameLabel.Name = "UxDivisionNameLabel";
             UxDivisionNameLabel.Size = new Size(102, 20);
             UxDivisionNameLabel.TabIndex = 4;
             UxDivisionNameLabel.Text = "DivisionName";
-            // 
-            // UxAllMatchesBtn
-            // 
-            UxAllMatchesBtn.Dock = DockStyle.Fill;
-            UxAllMatchesBtn.Location = new Point(3, 152);
-            UxAllMatchesBtn.Name = "UxAllMatchesBtn";
-            UxAllMatchesBtn.Size = new Size(250, 45);
-            UxAllMatchesBtn.TabIndex = 9;
-            UxAllMatchesBtn.Text = "Display All Matches";
-            UxAllMatchesBtn.UseVisualStyleBackColor = true;
-            // 
-            // UxStatsBySeasonBtn
-            // 
-            UxStatsBySeasonBtn.Dock = DockStyle.Fill;
-            UxStatsBySeasonBtn.Location = new Point(259, 152);
-            UxStatsBySeasonBtn.Name = "UxStatsBySeasonBtn";
-            UxStatsBySeasonBtn.Size = new Size(250, 45);
-            UxStatsBySeasonBtn.TabIndex = 10;
-            UxStatsBySeasonBtn.Text = "Stats By Season";
-            UxStatsBySeasonBtn.UseVisualStyleBackColor = true;
             // 
             // UxRosterButton
             // 
@@ -248,7 +237,6 @@
 
         private TableLayoutPanel UxTableLayout;
         private Label UxTeamNameLabel;
-        private Label UxStadiumLabel;
         private FlowLayoutPanel UxLossesFlowPanel;
         private Label LossLabel;
         private Label UxNumLossLabel;

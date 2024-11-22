@@ -13,7 +13,8 @@ namespace FootballStatsApp
     /// </summary>
     public class TeamCardModel
     {
-        public string stadium = "none";
+        public string name = "none";
+        //public string stadium = "none";
         public string city = "none";
         public string startDate = "none";
         public string divisionName = "none";

@@ -70,7 +70,7 @@ namespace FootballStatsApp
         private void OpenTeamView()
         {
             UxLandingFlowLayoutPanel.Controls.Clear();
-            UxLandingFlowLayoutPanel.Controls.Add(UxPlayerViewControl);
+            UxLandingFlowLayoutPanel.Controls.Add(UxTeamViewControl);
         }
         
         private void OpenPlayerTeamJoinControl()

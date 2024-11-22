@@ -31,9 +31,9 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             FlowPanel = new FlowLayoutPanel();
             UxFilterFlowPanel = new FlowLayoutPanel();
-            comboBox1 = new ComboBox();
             label1 = new Label();
-            button1 = new Button();
+            UxTeamComboBox = new ComboBox();
+            UxSearchBtn = new Button();
             UxTeamsFlowPanel = new FlowLayoutPanel();
             flowLayoutPanel1.SuspendLayout();
             FlowPanel.SuspendLayout();
@@ -65,22 +65,13 @@
             // UxFilterFlowPanel
             // 
             UxFilterFlowPanel.Controls.Add(label1);
-            UxFilterFlowPanel.Controls.Add(comboBox1);
-            UxFilterFlowPanel.Controls.Add(button1);
+            UxFilterFlowPanel.Controls.Add(UxTeamComboBox);
+            UxFilterFlowPanel.Controls.Add(UxSearchBtn);
             UxFilterFlowPanel.Dock = DockStyle.Top;
             UxFilterFlowPanel.Location = new Point(3, 3);
             UxFilterFlowPanel.Name = "UxFilterFlowPanel";
             UxFilterFlowPanel.Size = new Size(881, 71);
             UxFilterFlowPanel.TabIndex = 0;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 12F);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(134, 3);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(266, 36);
-            comboBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -93,16 +84,26 @@
             label1.TabIndex = 1;
             label1.Text = "Seach Teams:";
             label1.TextAlign = ContentAlignment.MiddleLeft;
+            label1.Click += label1_Click;
             // 
-            // button1
+            // UxTeamComboBox
             // 
-            button1.Font = new Font("Segoe UI", 12F);
-            button1.Location = new Point(406, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 36);
-            button1.TabIndex = 2;
-            button1.Text = "Search";
-            button1.UseVisualStyleBackColor = true;
+            UxTeamComboBox.Font = new Font("Segoe UI", 12F);
+            UxTeamComboBox.FormattingEnabled = true;
+            UxTeamComboBox.Location = new Point(134, 3);
+            UxTeamComboBox.Name = "UxTeamComboBox";
+            UxTeamComboBox.Size = new Size(266, 36);
+            UxTeamComboBox.TabIndex = 0;
+            // 
+            // UxSearchBtn
+            // 
+            UxSearchBtn.Font = new Font("Segoe UI", 12F);
+            UxSearchBtn.Location = new Point(406, 3);
+            UxSearchBtn.Name = "UxSearchBtn";
+            UxSearchBtn.Size = new Size(94, 36);
+            UxSearchBtn.TabIndex = 2;
+            UxSearchBtn.Text = "Search";
+            UxSearchBtn.UseVisualStyleBackColor = true;
             // 
             // UxTeamsFlowPanel
             // 
@@ -134,8 +135,8 @@
         private FlowLayoutPanel FlowPanel;
         private FlowLayoutPanel UxFilterFlowPanel;
         private Label label1;
-        private ComboBox comboBox1;
-        private Button button1;
+        private ComboBox UxTeamComboBox;
+        private Button UxSearchBtn;
         private FlowLayoutPanel UxTeamsFlowPanel;
     }
 }
