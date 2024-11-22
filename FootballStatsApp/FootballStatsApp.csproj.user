@@ -4,14 +4,14 @@
     <Compile Update="BothDivStandControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="DivStandControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="LandingTextControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="LandingView.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MatchCard.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="PlayerSelectedControl.cs">
       <SubType>UserControl</SubType>

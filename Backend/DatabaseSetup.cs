@@ -7,7 +7,7 @@ namespace Backend;
 using static DatabaseConnect;
 
 //Initializes database
-internal static class DatabaseSetup
+public static class DatabaseSetup
 {
     //function since we may not want to re setup the tables every single time.
     public static void SetupDB()
