@@ -46,13 +46,17 @@ namespace FootballStatsApp
             Table? t = Backend.DatabaseManage.QueryFileText("Declare @FirstName NVarChar(32) = N'"+FirstName+"';\n"+
                                                            "Declare @LastName NVarChar(32) = N'"+LastName+"';",
                 "CareerStatistics");
-            Table? t2 = Backend.DatabaseManage.QueryText("Select p.PlayerId from Football.Player p where p.FirstName=N'"+FirstName+"' and p.LastName=N'"+LastName+'\'');
+            Table? t2 = Backend.DatabaseManage.QueryText("Select p.PlayerId, p.Bio from Football.Player p where p.FirstName=N'"+FirstName+"' and p.LastName=N'"+LastName+'\'');
             if (t != null)
             {
                 if (t2.Data.Length != 0)
                 {
                     int id = t2[0].Int["PlayerId"];
                     UxPlayersListBox.Items.Add("Player Found with ID "+id);
+                    string? bio = t2[0].Str["Bio"];
+                    if(bio!=null)
+                        UxPlayersListBox.Items.Add(bio);
+
 
                     Table? t3 = Backend.DatabaseManage.QueryText("Select ptm.StartDate,ptm.EndDate,t.Name from Football.PlayerTeamHistory ptm "+
                                                                  "Inner join Football.Team t on t.TeamId = ptm.TeamId \r\n"+

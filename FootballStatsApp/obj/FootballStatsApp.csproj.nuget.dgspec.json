@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj": {}
+    "C:\\Users\\Shay\\ShaySpace\\School\\CIS 560\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj": {
+    "C:\\Users\\Shay\\ShaySpace\\School\\CIS 560\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
+        "projectUniqueName": "C:\\Users\\Shay\\ShaySpace\\School\\CIS 560\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
         "projectName": "FootballStatsApp",
-        "projectPath": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
-        "packagesPath": "C:\\Users\\Daniel J. Robertson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\obj\\",
+        "projectPath": "C:\\Users\\Shay\\ShaySpace\\School\\CIS 560\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
+        "packagesPath": "C:\\Users\\Shay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Shay\\ShaySpace\\School\\CIS 560\\CIS560_FinalProject\\FootballStatsApp\\obj\\",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Daniel J. Robertson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Shay\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -43,12 +44,21 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.2.2, )"
+            },
+            "Microsoft.SqlServer.SqlManagementObjects": {
+              "target": "Package",
+              "version": "[172.52.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
