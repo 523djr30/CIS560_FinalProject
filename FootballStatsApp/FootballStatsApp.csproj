@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Backend\Backend.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Backend">
       <HintPath>..\Backend\bin\Debug\net8.0\Backend.dll</HintPath>
     </Reference>
