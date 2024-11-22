@@ -48,10 +48,12 @@ internal static class DatabaseSetup
 
     public static void ForceSetupDB()
     {
+        DateTime start = DateTime.Now;
         CreateTables();
         // ExamplePopulateTable();
         PopulateAllTables();
         FileManager.FreeMemoryHog();
+        Console.WriteLine("Done, total time taken is "+Math.Floor((DateTime.Now-start).TotalMinutes)+":"+(DateTime.Now-start).Seconds);
     }
 
     private static void CreateTables() => RunDmlFile("CreateTables");
@@ -384,9 +386,11 @@ internal static class DatabaseSetup
 
     private static int PopulatePlayerMatchStats()
     {
+        Console.WriteLine("Populating match stats, this will take a while");
         List<FileManager.PlayerMatchData> dataList = FileManager.GetPlayerMatchStats();
 
         List<object[]> data = [];
+        
         foreach (var row in dataList)
         {
             //PlayerId,TeamName,Date,Yards,Points
