@@ -22,6 +22,7 @@ internal static class FileManager
             if (Directory.Exists(BackendPath)) return;
             BackendPath = "../" + BackendPath;
         }
+        // BackendPath = "C:/Users/Shay/ShaySpace/School/CIS 560/CIS560_FinalProject/Backend";
     }
 
     private static Dictionary<string, string> TeamAbbreviations = new()

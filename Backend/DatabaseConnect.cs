@@ -32,7 +32,7 @@ internal static class DatabaseConnect
 
     public static int RunDmlText(string sql)
     {
-        // Console.WriteLine(sql);
+        Console.WriteLine(sql);
         using var con = Connect();
         Server s = new(new ServerConnection(con));
         int r = s.ConnectionContext.ExecuteNonQuery(sql);
@@ -42,30 +42,30 @@ internal static class DatabaseConnect
 
     public static int RunDmlFile(string filename) => CallWithFile(RunDmlText, filename);
 
-    
-    public static int ChunkifyOperation(Func<object[][],int> op,object[][] data, int chunkSize)
+
+    public static int ChunkifyOperation(Func<object[][], int> op, object[][] data, int chunkSize)
     {
         int sum = 0;
         for (int i = 0; i < data.Length;)
         {
-            int nextI = Math.Min(i + chunkSize,data.Length);
-            sum+=op.Invoke(data[i..(nextI-1)]);
+            int nextI = Math.Min(i + chunkSize, data.Length);
+            sum += op.Invoke(data[i..(nextI - 1)]);
             i = nextI;
         }
 
         return sum;
     }
-    
-    
+
+
     public static string RunDmlTextWithValueTableSqlGen(string colNames, object[][] data, string sql) =>
-        "With ValueTable as (Select * from (" + ValuesSqlGen(data) + ") as v ("+colNames+"))" + sql;
-    
+        "With ValueTable as (Select * from (" + ValuesSqlGen(data) + ") as v (" + colNames + "))" + sql;
+
     public static int RunDmlTextWithValueTable(string colNames, object[][] data, string sql)
     {
         if (data.Length > 500)
-            return ChunkifyOperation((d)=>RunDmlTextWithValueTable(colNames,d,sql),data,500);
-        
-        return RunDmlText(RunDmlTextWithValueTableSqlGen(colNames,data,sql));
+            return ChunkifyOperation((d) => RunDmlTextWithValueTable(colNames, d, sql), data, 500);
+
+        return RunDmlText(RunDmlTextWithValueTableSqlGen(colNames, data, sql));
     }
 
     public static int RunDmlFileWithValueTable(string colNames, object[][] data, string filename)
@@ -73,16 +73,15 @@ internal static class DatabaseConnect
         string sql = File.ReadAllText(FileManager.SqlPath + filename + ".sql");
         return RunDmlTextWithValueTable(colNames, data, sql);
     }
-    
-   
-    
+
+
     public static string InsertRowsSqlGen(string tableName, string colNames, object[][] data) =>
         "Insert into Football." + tableName + '(' + colNames + ")\n" + ValuesSqlGen(data) + ";\nGO\n";
 
     public static int InsertRows(string tableName, string colNames, object[][] data)
     {
         if (data.Length > 500)
-            return ChunkifyOperation((d)=>InsertRows(tableName,colNames,d),data,500);
+            return ChunkifyOperation((d) => InsertRows(tableName, colNames, d), data, 500);
         return RunDmlText(InsertRowsSqlGen(tableName, colNames, data));
     }
 
@@ -102,7 +101,11 @@ internal static class DatabaseConnect
                     sb.Append(',');
                 firstCol = false;
 
-                if (d is int dI)
+                if (d is null)
+
+                    sb.Append("NULL");
+
+                else if (d is int dI)
                     sb.Append(dI); //int
                 else if (d is string dS)
                 {
@@ -120,12 +123,17 @@ internal static class DatabaseConnect
         return sb.ToString();
     }
 
-    
 
+    public static Table? QueryTextPlusFile(string text, string filename)
+    {
+        string fileSql = File.ReadAllText(FileManager.SqlPath + filename + ".sql");
+        return QueryText(text + fileSql);
+    }
 
     //array of rows, where each row is an array of data returned from the query
     public static Table? QueryText(string sql)
     {
+        Console.WriteLine(sql);
         try
         {
             List<object[]> ret = [];
