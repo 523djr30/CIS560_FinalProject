@@ -1,7 +1,7 @@
---Doesn't work due to points thing
+--Old verion, Doesn't work due to points thing
 
-Declare @SeasonId int = 2001;
-Declare @TeamName NVarChar(32) = N'Bills';
+--Declare @SeasonId int = 2001;
+--Declare @TeamName NVarChar(32) = N'Bills';
 
 WITH TeamSeasonStats AS (
     SELECT T.Name AS TeamName,S.SeasonId,

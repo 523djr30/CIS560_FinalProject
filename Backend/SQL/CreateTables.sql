@@ -1,7 +1,7 @@
 IF SCHEMA_ID(N'Football') IS NULL
     EXEC (N'CREATE SCHEMA Football;');
 GO
-/*Table Create Order
+/*Table Create Order (for stages 2-4, each table references a table in previous stage)
 1:  Positions
     Team
     Division
@@ -14,6 +14,7 @@ GO
 4:  PlayerMatchStats
 */
 
+--tables dropped in reverse creation order to avoid dropping a table referenced by another
 Drop Table IF EXISTS Football.PlayerMatchStats;
 
 Drop Table IF EXISTS Football.Match;
@@ -53,7 +54,7 @@ Create Table Football.Division
 
 Create Table Football.Player
 (
-    PlayerId  int          not null /*identity (1, 1)*/ primary key,
+    PlayerId  int          not null primary key, --not identity since Id is determined by the source data
     FirstName NVarChar(64) not null,
     LastName  NVarChar(64) not null,
     Bio       NVarChar(512),
@@ -62,7 +63,7 @@ Create Table Football.Player
 
 Create Table Football.Season
 (
-    SeasonId     int            not null primary key,
+    SeasonId     int            not null primary key, --not identity since seasonId corresponds to year
     StartDate    DateTimeOffset not null,
     PlayoffsDate DateTimeOffset,
     EndDate      DateTimeOffset not null,
@@ -127,33 +128,6 @@ Create Table Football.PlayerMatchStats
     TeamID              int foreign key references Football.Team (TeamId),
     Yards               int,
     Points              int,
-    --TODO more stats
+    --If we tracked more stats, they would go here
 );
 GO
-
-/*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- */

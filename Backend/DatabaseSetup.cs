@@ -50,7 +50,6 @@ internal static class DatabaseSetup
     {
         DateTime start = DateTime.Now;
         CreateTables();
-        // ExamplePopulateTable();
         PopulateAllTables();
         FileManager.FreeMemoryHog();
         Console.WriteLine("Done, total time taken is "+Math.Floor((DateTime.Now-start).TotalMinutes)+":"+(DateTime.Now-start).Seconds);
@@ -179,7 +178,7 @@ internal static class DatabaseSetup
     private static int PopulateSeason()
     {
         List<object[]> data = [];
-        for (int i = 1970; i < 2024; i++)
+        for (int i = 1900; i < 2100; i++)
         {
             data.Add([
                 i,
