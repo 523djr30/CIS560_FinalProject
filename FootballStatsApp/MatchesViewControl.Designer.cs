@@ -33,10 +33,9 @@
             Team2Box = new TextBox();
             Team1Box = new TextBox();
             UxSearchBtn = new Button();
-            UxProcessing = new Button();
+            UxHeaderPanel = new FlowLayoutPanel();
             flowLayoutPanel1 = new FlowLayoutPanel();
             UxMatchesResultsFlowPanel = new FlowLayoutPanel();
-            UxHeaderPanel = new FlowLayoutPanel();
             UxPlayerViewFlowLayoutPanel.SuspendLayout();
             UxSearchFlowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -60,7 +59,6 @@
             UxSearchFlowLayoutPanel.Controls.Add(Team2Box);
             UxSearchFlowLayoutPanel.Controls.Add(Team1Box);
             UxSearchFlowLayoutPanel.Controls.Add(UxSearchBtn);
-            UxSearchFlowLayoutPanel.Controls.Add(UxProcessing);
             UxSearchFlowLayoutPanel.Location = new Point(3, 3);
             UxSearchFlowLayoutPanel.Name = "UxSearchFlowLayoutPanel";
             UxSearchFlowLayoutPanel.Size = new Size(894, 105);
@@ -68,44 +66,46 @@
             // 
             // Team2Box
             // 
-            Team2Box.Location = new Point(3, 3);
+            Team2Box.Font = new Font("Segoe UI", 12F);
+            Team2Box.Location = new Point(3, 6);
+            Team2Box.Margin = new Padding(3, 6, 3, 3);
             Team2Box.Name = "Team2Box";
             Team2Box.PlaceholderText = "Team 2";
-            Team2Box.Size = new Size(285, 27);
+            Team2Box.Size = new Size(285, 34);
             Team2Box.TabIndex = 3;
             Team2Box.Text = "Bills";
             // 
             // Team1Box
             // 
-            Team1Box.Location = new Point(294, 3);
+            Team1Box.Font = new Font("Segoe UI", 12F);
+            Team1Box.Location = new Point(294, 6);
+            Team1Box.Margin = new Padding(3, 6, 3, 3);
             Team1Box.Name = "Team1Box";
             Team1Box.PlaceholderText = "Team 1";
-            Team1Box.Size = new Size(285, 27);
+            Team1Box.Size = new Size(285, 34);
             Team1Box.TabIndex = 2;
             Team1Box.Text = "Dolphins";
             // 
             // UxSearchBtn
             // 
+            UxSearchBtn.AutoSize = true;
+            UxSearchBtn.Font = new Font("Segoe UI", 12F);
             UxSearchBtn.Location = new Point(622, 3);
             UxSearchBtn.Margin = new Padding(40, 3, 3, 3);
             UxSearchBtn.Name = "UxSearchBtn";
-            UxSearchBtn.Size = new Size(94, 29);
+            UxSearchBtn.Size = new Size(94, 38);
             UxSearchBtn.TabIndex = 1;
             UxSearchBtn.Text = "Search";
             UxSearchBtn.UseVisualStyleBackColor = true;
             UxSearchBtn.Click += UxSearchBtn_Click;
             // 
-            // UxProcessing
+            // UxHeaderPanel
             // 
-            UxProcessing.AutoSize = true;
-            UxProcessing.Enabled = false;
-            UxProcessing.Location = new Point(722, 3);
-            UxProcessing.Name = "UxProcessing";
-            UxProcessing.Size = new Size(135, 30);
-            UxProcessing.TabIndex = 4;
-            UxProcessing.Text = "PROCESSING...";
-            UxProcessing.UseVisualStyleBackColor = true;
-            UxProcessing.Visible = false;
+            UxHeaderPanel.AutoSize = true;
+            UxHeaderPanel.Location = new Point(3, 114);
+            UxHeaderPanel.Name = "UxHeaderPanel";
+            UxHeaderPanel.Size = new Size(0, 0);
+            UxHeaderPanel.TabIndex = 6;
             // 
             // flowLayoutPanel1
             // 
@@ -125,14 +125,6 @@
             UxMatchesResultsFlowPanel.Name = "UxMatchesResultsFlowPanel";
             UxMatchesResultsFlowPanel.Size = new Size(894, 500);
             UxMatchesResultsFlowPanel.TabIndex = 5;
-            // 
-            // UxHeaderPanel
-            // 
-            UxHeaderPanel.AutoSize = true;
-            UxHeaderPanel.Location = new Point(3, 114);
-            UxHeaderPanel.Name = "UxHeaderPanel";
-            UxHeaderPanel.Size = new Size(0, 0);
-            UxHeaderPanel.TabIndex = 6;
             // 
             // MatchesViewControl
             // 
@@ -159,7 +151,6 @@
         private System.Windows.Forms.Button UxSearchBtn;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel UxMatchesResultsFlowPanel;
-        private Button UxProcessing;
         private FlowLayoutPanel UxHeaderPanel;
     }
 }

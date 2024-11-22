@@ -35,7 +35,6 @@ namespace FootballStatsApp
 
 
             UxMatchesResultsFlowPanel.SuspendLayout();
-            UxProcessing.Visible = true;
             // populate panel with controls
             UxHeaderPanel.Controls.Add(
                 new MatchCard(
@@ -71,7 +70,6 @@ namespace FootballStatsApp
                         )
                     );
                 UxMatchesResultsFlowPanel.ResumeLayout(true);
-                UxProcessing.Visible = false;
             }
         }
 
