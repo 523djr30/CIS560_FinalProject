@@ -94,6 +94,7 @@
             UxAllMatchesBtn.TabIndex = 9;
             UxAllMatchesBtn.Text = "Display All Matches";
             UxAllMatchesBtn.UseVisualStyleBackColor = true;
+            UxAllMatchesBtn.Visible = false;
             // 
             // UxStatsBySeasonBtn
             // 
@@ -104,6 +105,7 @@
             UxStatsBySeasonBtn.TabIndex = 10;
             UxStatsBySeasonBtn.Text = "Stats By Season";
             UxStatsBySeasonBtn.UseVisualStyleBackColor = true;
+            UxStatsBySeasonBtn.Visible = false;
             // 
             // UxWinsFlowPanel
             // 
@@ -121,16 +123,16 @@
             WinLabel.Location = new Point(6, 6);
             WinLabel.Margin = new Padding(6);
             WinLabel.Name = "WinLabel";
-            WinLabel.Size = new Size(78, 32);
+            WinLabel.Size = new Size(136, 32);
             WinLabel.TabIndex = 0;
-            WinLabel.Text = "Wins: ";
+            WinLabel.Text = "Total Wins: ";
             WinLabel.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // UxNumWinLabel
             // 
             UxNumWinLabel.AutoSize = true;
             UxNumWinLabel.Font = new Font("Segoe UI", 14F);
-            UxNumWinLabel.Location = new Point(96, 6);
+            UxNumWinLabel.Location = new Point(154, 6);
             UxNumWinLabel.Margin = new Padding(6);
             UxNumWinLabel.Name = "UxNumWinLabel";
             UxNumWinLabel.Size = new Size(28, 32);
@@ -155,15 +157,15 @@
             LossLabel.Location = new Point(6, 6);
             LossLabel.Margin = new Padding(6);
             LossLabel.Name = "LossLabel";
-            LossLabel.Size = new Size(87, 32);
+            LossLabel.Size = new Size(145, 32);
             LossLabel.TabIndex = 0;
-            LossLabel.Text = "Losses:";
+            LossLabel.Text = "Total Losses:";
             // 
             // UxNumLossLabel
             // 
             UxNumLossLabel.AutoSize = true;
             UxNumLossLabel.Font = new Font("Segoe UI", 14F);
-            UxNumLossLabel.Location = new Point(105, 6);
+            UxNumLossLabel.Location = new Point(163, 6);
             UxNumLossLabel.Margin = new Padding(6);
             UxNumLossLabel.Name = "UxNumLossLabel";
             UxNumLossLabel.Size = new Size(28, 32);
@@ -220,6 +222,7 @@
             UxRosterButton.TabIndex = 11;
             UxRosterButton.Text = "Roster";
             UxRosterButton.UseVisualStyleBackColor = true;
+            UxRosterButton.Visible = false;
             // 
             // TeamCardControl
             // 

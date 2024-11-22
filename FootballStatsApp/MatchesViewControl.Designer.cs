@@ -33,10 +33,10 @@
             Team2Box = new TextBox();
             Team1Box = new TextBox();
             UxSearchBtn = new Button();
-            UxPlayersListBox = new ListBox();
+            UxProcessing = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
             UxMatchesResultsFlowPanel = new FlowLayoutPanel();
-            UxProcessing = new Button();
+            UxHeaderPanel = new FlowLayoutPanel();
             UxPlayerViewFlowLayoutPanel.SuspendLayout();
             UxSearchFlowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -45,7 +45,7 @@
             // 
             UxPlayerViewFlowLayoutPanel.AutoSize = true;
             UxPlayerViewFlowLayoutPanel.Controls.Add(UxSearchFlowLayoutPanel);
-            UxPlayerViewFlowLayoutPanel.Controls.Add(UxPlayersListBox);
+            UxPlayerViewFlowLayoutPanel.Controls.Add(UxHeaderPanel);
             UxPlayerViewFlowLayoutPanel.Controls.Add(flowLayoutPanel1);
             UxPlayerViewFlowLayoutPanel.Controls.Add(UxMatchesResultsFlowPanel);
             UxPlayerViewFlowLayoutPanel.Dock = DockStyle.Fill;
@@ -95,37 +95,6 @@
             UxSearchBtn.UseVisualStyleBackColor = true;
             UxSearchBtn.Click += UxSearchBtn_Click;
             // 
-            // UxPlayersListBox
-            // 
-            UxPlayersListBox.Dock = DockStyle.Top;
-            UxPlayersListBox.FormattingEnabled = true;
-            UxPlayersListBox.Location = new Point(3, 114);
-            UxPlayersListBox.Name = "UxPlayersListBox";
-            UxPlayersListBox.Size = new Size(894, 124);
-            UxPlayersListBox.TabIndex = 2;
-            UxPlayersListBox.Visible = false;
-            UxPlayersListBox.SelectedIndexChanged += UxPlayersListBox_SelectedIndexChanged;
-            UxPlayersListBox.DataContextChanged += UxPlayersListBox_DataContextChanged;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.Location = new Point(3, 244);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(894, 0);
-            flowLayoutPanel1.TabIndex = 4;
-            // 
-            // UxMatchesResultsFlowPanel
-            // 
-            UxMatchesResultsFlowPanel.AutoScroll = true;
-            UxMatchesResultsFlowPanel.Dock = DockStyle.Top;
-            UxMatchesResultsFlowPanel.Location = new Point(3, 250);
-            UxMatchesResultsFlowPanel.Name = "UxMatchesResultsFlowPanel";
-            UxMatchesResultsFlowPanel.Size = new Size(894, 500);
-            UxMatchesResultsFlowPanel.TabIndex = 5;
-            // 
             // UxProcessing
             // 
             UxProcessing.AutoSize = true;
@@ -137,6 +106,33 @@
             UxProcessing.Text = "PROCESSING...";
             UxProcessing.UseVisualStyleBackColor = true;
             UxProcessing.Visible = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(3, 120);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(894, 0);
+            flowLayoutPanel1.TabIndex = 4;
+            // 
+            // UxMatchesResultsFlowPanel
+            // 
+            UxMatchesResultsFlowPanel.AutoScroll = true;
+            UxMatchesResultsFlowPanel.Dock = DockStyle.Top;
+            UxMatchesResultsFlowPanel.Location = new Point(3, 126);
+            UxMatchesResultsFlowPanel.Name = "UxMatchesResultsFlowPanel";
+            UxMatchesResultsFlowPanel.Size = new Size(894, 500);
+            UxMatchesResultsFlowPanel.TabIndex = 5;
+            // 
+            // UxHeaderPanel
+            // 
+            UxHeaderPanel.AutoSize = true;
+            UxHeaderPanel.Location = new Point(3, 114);
+            UxHeaderPanel.Name = "UxHeaderPanel";
+            UxHeaderPanel.Size = new Size(0, 0);
+            UxHeaderPanel.TabIndex = 6;
             // 
             // MatchesViewControl
             // 
@@ -161,9 +157,9 @@
         private System.Windows.Forms.FlowLayoutPanel UxPlayerViewFlowLayoutPanel;
         private System.Windows.Forms.FlowLayoutPanel UxSearchFlowLayoutPanel;
         private System.Windows.Forms.Button UxSearchBtn;
-        private System.Windows.Forms.ListBox UxPlayersListBox;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel UxMatchesResultsFlowPanel;
         private Button UxProcessing;
+        private FlowLayoutPanel UxHeaderPanel;
     }
 }

@@ -29,7 +29,6 @@ namespace FootballStatsApp
         {
             string Team1 = Team1Box.Text, Team2 = Team2Box.Text;
 
-            UxPlayersListBox.Items.Clear();
             Table? t = Backend.DatabaseManage.QueryFileText("Declare @TeamName1 NVarChar(32) = N'" + Team1 + "';\n" +
                                                             "Declare @TeamName2 NVarChar(32) = N'" + Team2 + "';",
                 "MatchStats");
@@ -38,7 +37,17 @@ namespace FootballStatsApp
             UxMatchesResultsFlowPanel.SuspendLayout();
             UxProcessing.Visible = true;
             // populate panel with controls
-
+            UxHeaderPanel.Controls.Add(
+                new MatchCard(
+                        "Date",
+                        "Home Team",
+                        "Away Team",
+                        "Winning Team",
+                        "Home Team Points",
+                        "Away Team Points",
+                        "Stadium"
+                    )
+                );
             
             foreach (Row row in t)
             {
@@ -49,6 +58,7 @@ namespace FootballStatsApp
                         row.GetItem<int>("HomeTeamPoints").ToString() +
                         row.GetItem<int>("AwayTeamPoints").ToString(),
                         row.GetItem<string>("StadiumName"));*/
+                
                 UxMatchesResultsFlowPanel.Controls.Add(
                 new MatchCard(
                         row.GetItem<DateTimeOffset>("Date").ToString("d"),
