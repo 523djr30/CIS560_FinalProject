@@ -1,7 +1,4 @@
---Determines how many wins each team has had over their whole existence in the NFL.
---Part of another query but can stand alone. To add team filtering to get one single result, uncomment the filtering WHERE clause
---DECLARE @TeamId INT = 1;
-
+--Query to give all the information necessary for every team's teamcard in the GUI
 DECLARE @MatchStatsTbl TABLE ( HomeTeamId INT, HomeTeamName NVARCHAR(32), HomeTeamPoints INT, AwayTeamId INT, AwayTeamName NVARCHAR(32), AwayTeamPoints INT, MatchDate DATETIMEOFFSET, WinningTeamId INT);
 
 WITH MatchStats AS (
@@ -26,10 +23,18 @@ FROM MatchStats
 ORDER BY MatchDate;
 
 
-Select T.TeamId, T.[Name], (COUNT(*) - COUNT(CASE WHEN T.TeamId <> M.WinningTeamId THEN 1 END)) AS Wins, COUNT(CASE WHEN T.TeamId <> M.WinningTeamId THEN 1 END) AS Losses
+With TeamWinsCTE AS(
+Select T.TeamId, S.SeasonId, (COUNT(*) - COUNT(CASE WHEN T.TeamId <> M.WinningTeamId THEN 1 END)) AS Wins, COUNT(CASE WHEN T.TeamId <> M.WinningTeamId THEN 1 END) AS Losses
 From Football.Team T
 INNER JOIN @MatchStatsTbl M On T.TeamId = M.HomeTeamId OR T.TeamId = M.AwayTeamId
 INNER JOIN Football.Season S ON M.[MatchDate] BETWEEN S.StartDate AND S.EndDate
-WHERE T.[Name] = @TeamName -- Param TeamId
-Group By T.TeamId, T.[Name]
-Order By T.TeamId
+Group By T.TeamId, S.SeasonId
+)
+Select T.[Name] AS TeamName, MAX(T.City) AS City, MAX(Stad.[Name]) AS StadiumName, MAX(D.[Name]) AS DivisionName, SUM(TW.Wins) AS Wins, SUM(TW.Losses) AS Losses
+From Football.Team T
+Left Join Football.Stadium Stad ON Stad.TeamID = T.TeamId
+Left Join Football.DivisionMembership DM ON DM.TeamID = T.TeamId
+Left Join Football.Division D ON D.DivisionId = DM.DivisionID
+Left Join TeamWinsCTE TW ON TW.TeamId = T.TeamId
+Where T.[Name] = @TeamName
+Group by T.TeamId, T.[Name]

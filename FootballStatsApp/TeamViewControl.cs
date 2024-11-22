@@ -42,7 +42,7 @@ namespace FootballStatsApp
         {
             Table? teamsInfo = Backend.DatabaseManage.QueryFileText("", "TeamCardQuery");
             List<TeamCardModel> infoCards = [];
-            foreach(Row row in teamsInfo)
+            foreach (Row row in teamsInfo)
             {
                 //Table? _roster = Backend.DatabaseManage.QueryFileText("DECLARE @TeamId INT = " + row.GetItem<int>("TeamId")+ ";\n", "TeamRoster");
                 //Table? _matches = Backend.DatabaseManage.QueryFileText("DECLARE @TeamId INT = " + row.GetItem<int>("TeamId") + ";\n", "TeamMatches");
@@ -75,11 +75,42 @@ namespace FootballStatsApp
         /// <param name="teamName">The name of the team given by the combo box by the user.</param>
         private void PopulateTeams(string teamName)
         {
-            if (teamName == null || teamName == ""){
+            if (teamName == null || teamName == "")
+            {
                 InitialPopulateTeams();
                 return;
             }
+            else
+            {
+                Table? teamsInfo = Backend.DatabaseManage.QueryFileText("DECLARE @TeamName NVARCHAR(32) = N'"+teamName+"';\n", "SingleTeamCardQ");
+                UxTeamsFlowPanel.Controls.Clear();
+                if (teamsInfo is null)
+                {
+                    InitialPopulateTeams();
+                    return;
+                };
+                Row row = teamsInfo[0];
+                TeamCardModel infoCard = new TeamCardModel()
+                {
+                    name = row.GetItem<string>("TeamName"),
+                    city = row.GetItem<string>("City"),
+                    //startDate = row.GetItem<string>("Name"),
+                    stadium = row.GetItem<string>("StadiumName"),
+                    divisionName = row.GetItem<string>("DivisionName"),
+                    numWins = row.GetItem<int>("Wins"),
+                    numLoss = row.GetItem<int>("Losses")/*,
 
+                    roster = _roster,
+                    matches = _matches*/
+                };
+                if (infoCard is null)
+                {
+                    InitialPopulateTeams();
+                    return;
+                };
+                UxTeamsFlowPanel.Controls.Add(new TeamCardControl(infoCard));
+                
+            }
 
         }
 
@@ -96,6 +127,11 @@ namespace FootballStatsApp
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void UxSearchBtn_Click(object sender, EventArgs e)
+        {
+            PopulateTeams(UxTeamComboBox.Text);
         }
     }
 }

@@ -31,9 +31,10 @@ INNER JOIN Football.Season S ON M.[MatchDate] BETWEEN S.StartDate AND S.EndDate
 --WHERE S.SeasonId = @SeasonId -- Param, SeasonId
 Group By T.TeamId, S.SeasonId
 )
-Select T.[Name] AS TeamName, T.City, Stad.[Name] AS StadiumName, D.[Name] AS DivisionName, TW.Wins, TW.Losses
+Select T.[Name] AS TeamName, MAX(T.City) AS City, MAX(Stad.[Name]) AS StadiumName, MAX(D.[Name]) AS DivisionName, SUM(TW.Wins) AS Wins, SUM(TW.Losses) AS Losses
 From Football.Team T
-Inner Join Football.Stadium Stad ON Stad.TeamID = T.TeamId
-Inner Join Football.DivisionMembership DM ON DM.TeamID = T.TeamId
-Inner Join Football.Division D ON D.DivisionId = DM.DivisionID
-Inner Join TeamWinsCTE TW ON TW.TeamId = T.TeamId
+Left Join Football.Stadium Stad ON Stad.TeamID = T.TeamId
+Left Join Football.DivisionMembership DM ON DM.TeamID = T.TeamId
+Left Join Football.Division D ON D.DivisionId = DM.DivisionID
+Left Join TeamWinsCTE TW ON TW.TeamId = T.TeamId
+Group by T.TeamId, T.[Name]
