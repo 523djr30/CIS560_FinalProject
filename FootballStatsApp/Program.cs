@@ -1,4 +1,3 @@
-
 namespace FootballStatsApp
 {
     internal static class Program
