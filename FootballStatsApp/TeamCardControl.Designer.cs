@@ -39,8 +39,8 @@
             LossLabel = new Label();
             UxNumLossLabel = new Label();
             UxInfoFlowPanel = new FlowLayoutPanel();
+            UxStadiumLabel = new Label();
             UxCityLocLabel = new Label();
-            UxStartDateLabel = new Label();
             UxDivisionNameLabel = new Label();
             UxRosterButton = new Button();
             UxTableLayout.SuspendLayout();
@@ -118,7 +118,8 @@
             // 
             WinLabel.AutoSize = true;
             WinLabel.Font = new Font("Segoe UI", 14F);
-            WinLabel.Location = new Point(3, 0);
+            WinLabel.Location = new Point(6, 6);
+            WinLabel.Margin = new Padding(6);
             WinLabel.Name = "WinLabel";
             WinLabel.Size = new Size(78, 32);
             WinLabel.TabIndex = 0;
@@ -129,7 +130,8 @@
             // 
             UxNumWinLabel.AutoSize = true;
             UxNumWinLabel.Font = new Font("Segoe UI", 14F);
-            UxNumWinLabel.Location = new Point(87, 0);
+            UxNumWinLabel.Location = new Point(96, 6);
+            UxNumWinLabel.Margin = new Padding(6);
             UxNumWinLabel.Name = "UxNumWinLabel";
             UxNumWinLabel.Size = new Size(28, 32);
             UxNumWinLabel.TabIndex = 1;
@@ -150,7 +152,8 @@
             // 
             LossLabel.AutoSize = true;
             LossLabel.Font = new Font("Segoe UI", 14F);
-            LossLabel.Location = new Point(3, 0);
+            LossLabel.Location = new Point(6, 6);
+            LossLabel.Margin = new Padding(6);
             LossLabel.Name = "LossLabel";
             LossLabel.Size = new Size(87, 32);
             LossLabel.TabIndex = 0;
@@ -160,7 +163,8 @@
             // 
             UxNumLossLabel.AutoSize = true;
             UxNumLossLabel.Font = new Font("Segoe UI", 14F);
-            UxNumLossLabel.Location = new Point(96, 0);
+            UxNumLossLabel.Location = new Point(105, 6);
+            UxNumLossLabel.Margin = new Padding(6);
             UxNumLossLabel.Name = "UxNumLossLabel";
             UxNumLossLabel.Size = new Size(28, 32);
             UxNumLossLabel.TabIndex = 1;
@@ -168,8 +172,8 @@
             // 
             // UxInfoFlowPanel
             // 
+            UxInfoFlowPanel.Controls.Add(UxStadiumLabel);
             UxInfoFlowPanel.Controls.Add(UxCityLocLabel);
-            UxInfoFlowPanel.Controls.Add(UxStartDateLabel);
             UxInfoFlowPanel.Controls.Add(UxDivisionNameLabel);
             UxInfoFlowPanel.FlowDirection = FlowDirection.TopDown;
             UxInfoFlowPanel.Location = new Point(3, 53);
@@ -177,32 +181,35 @@
             UxInfoFlowPanel.Size = new Size(250, 93);
             UxInfoFlowPanel.TabIndex = 8;
             // 
+            // UxStadiumLabel
+            // 
+            UxStadiumLabel.AutoSize = true;
+            UxStadiumLabel.Location = new Point(6, 6);
+            UxStadiumLabel.Margin = new Padding(6);
+            UxStadiumLabel.Name = "UxStadiumLabel";
+            UxStadiumLabel.Size = new Size(104, 20);
+            UxStadiumLabel.TabIndex = 5;
+            UxStadiumLabel.Text = "Stadium: none";
+            // 
             // UxCityLocLabel
             // 
             UxCityLocLabel.AutoSize = true;
-            UxCityLocLabel.Location = new Point(3, 0);
+            UxCityLocLabel.Location = new Point(6, 38);
+            UxCityLocLabel.Margin = new Padding(6);
             UxCityLocLabel.Name = "UxCityLocLabel";
-            UxCityLocLabel.Size = new Size(34, 20);
+            UxCityLocLabel.Size = new Size(74, 20);
             UxCityLocLabel.TabIndex = 2;
-            UxCityLocLabel.Text = "City";
-            // 
-            // UxStartDateLabel
-            // 
-            UxStartDateLabel.AutoSize = true;
-            UxStartDateLabel.Location = new Point(3, 20);
-            UxStartDateLabel.Name = "UxStartDateLabel";
-            UxStartDateLabel.Size = new Size(102, 20);
-            UxStartDateLabel.TabIndex = 3;
-            UxStartDateLabel.Text = "est. Start Date";
+            UxCityLocLabel.Text = "City: none";
             // 
             // UxDivisionNameLabel
             // 
             UxDivisionNameLabel.AutoSize = true;
-            UxDivisionNameLabel.Location = new Point(3, 40);
+            UxDivisionNameLabel.Location = new Point(122, 6);
+            UxDivisionNameLabel.Margin = new Padding(6);
             UxDivisionNameLabel.Name = "UxDivisionNameLabel";
             UxDivisionNameLabel.Size = new Size(102, 20);
             UxDivisionNameLabel.TabIndex = 4;
-            UxDivisionNameLabel.Text = "DivisionName";
+            UxDivisionNameLabel.Text = "Division: none";
             // 
             // UxRosterButton
             // 
@@ -245,10 +252,10 @@
         private Label UxNumWinLabel;
         private FlowLayoutPanel UxInfoFlowPanel;
         private Label UxCityLocLabel;
-        private Label UxStartDateLabel;
         private Label UxDivisionNameLabel;
         private Button UxRosterButton;
         private Button UxStatsBySeasonBtn;
         private Button UxAllMatchesBtn;
+        private Label UxStadiumLabel;
     }
 }

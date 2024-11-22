@@ -1,1 +1,0 @@
-Select [Name] From Football.Team;

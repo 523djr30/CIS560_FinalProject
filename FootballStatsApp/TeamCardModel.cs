@@ -14,9 +14,9 @@ namespace FootballStatsApp
     public class TeamCardModel
     {
         public string name = "none";
-        //public string stadium = "none";
+        public string stadium = "none";
         public string city = "none";
-        public string startDate = "none";
+        //public string startDate = "none";
         public string divisionName = "none";
         public int numWins = 0;
         public int numLoss = 0;

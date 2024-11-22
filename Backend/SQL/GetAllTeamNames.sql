@@ -1,1 +1,1 @@
-Select [Name] AS TeamName From Football.Team;
+Select TeamId, [Name] AS TeamName From Football.Team;

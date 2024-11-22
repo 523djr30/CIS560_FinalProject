@@ -19,6 +19,7 @@ namespace FootballStatsApp
         {
             InitializeComponent();
             PopulateComboBox();
+            InitialPopulateTeams();
         }
 
         /// <summary>
@@ -39,6 +40,32 @@ namespace FootballStatsApp
         /// </summary>
         private void InitialPopulateTeams()
         {
+            Table? teamsInfo = Backend.DatabaseManage.QueryFileText("", "TeamCardQuery");
+            List<TeamCardModel> infoCards = [];
+            foreach(Row row in teamsInfo)
+            {
+                //Table? _roster = Backend.DatabaseManage.QueryFileText("DECLARE @TeamId INT = " + row.GetItem<int>("TeamId")+ ";\n", "TeamRoster");
+                //Table? _matches = Backend.DatabaseManage.QueryFileText("DECLARE @TeamId INT = " + row.GetItem<int>("TeamId") + ";\n", "TeamMatches");
+                TeamCardModel infoCard = new TeamCardModel()
+                {
+                    name = row.GetItem<string>("TeamName"),
+                    city = row.GetItem<string>("City"),
+                    //startDate = row.GetItem<string>("Name"),
+                    stadium = row.GetItem<string>("StadiumName"),
+                    divisionName = row.GetItem<string>("DivisionName"),
+                    numWins = row.GetItem<int>("Wins"),
+                    numLoss = row.GetItem<int>("Losses")/*,
+
+                    roster = _roster,
+                    matches = _matches*/
+                };
+                infoCards.Add(infoCard);
+            }
+
+            foreach (TeamCardModel infocard in infoCards)
+            {
+                UxTeamsFlowPanel.Controls.Add(new TeamCardControl(infocard));
+            }
 
         }
 

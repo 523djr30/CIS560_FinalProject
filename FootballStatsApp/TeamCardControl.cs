@@ -19,7 +19,8 @@ namespace FootballStatsApp
             UxDivisionNameLabel.Text = teamData.divisionName;
             UxNumLossLabel.Text = teamData.numLoss.ToString();
             UxNumWinLabel.Text = teamData.numWins.ToString();
-            UxStartDateLabel.Text = teamData.startDate;
+            UxStadiumLabel.Text = teamData.stadium;
+            //UxStartDateLabel.Text = teamData.startDate;
             UxTeamNameLabel.Text = teamData.name;
         }
 
