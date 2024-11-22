@@ -53,7 +53,9 @@ public static class DatabaseSetup
         // ExamplePopulateTable();
         PopulateAllTables();
         FileManager.FreeMemoryHog();
-        Console.WriteLine("Done, total time taken is "+Math.Floor((DateTime.Now-start).TotalMinutes)+":"+(DateTime.Now-start).Seconds);
+        double timediff = Math.Floor((DateTime.Now - start).TotalMinutes);
+        double timediff_sec = (DateTime.Now - start).Seconds;
+        Console.WriteLine("Done, total time taken is "+timediff+":"+timediff_sec);
     }
 
     private static void CreateTables() => RunDmlFile("CreateTables");

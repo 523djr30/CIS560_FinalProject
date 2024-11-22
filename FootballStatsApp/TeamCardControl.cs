@@ -12,9 +12,14 @@ namespace FootballStatsApp
 {
     public partial class TeamCardControl : UserControl
     {
-        public TeamCardControl()
+        public TeamCardControl(TeamCardModel teamData)
         {
             InitializeComponent();
+        }
+
+        private void UxLossesFlowPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
