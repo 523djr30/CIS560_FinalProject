@@ -132,44 +132,62 @@ internal static class FileManager
     }
 
 
-    private const int matchDataLimit = int.MaxValue;//4000; //TODO set to int max after testing
     private static List<PlayerMatchData>? playerMatchStats = null;
     
     public static List<PlayerMatchData> GetPlayerMatchStats()
     {
-        using StreamReader r = new StreamReader(DataPath + "games.json");
-        // return r.ReadToEnd();
-        
         if (playerMatchStats != null)
             return playerMatchStats;
         
-        // string json = ReadJsonFile("games");
-        List<PlayerMatchData> list = new List<PlayerMatchData>(4096);
+        Console.WriteLine("Parsing raw data, this may take a while");
+        
+        Dictionary<string, PlayerMatchData> uniqueRows = new(4096);
 
-        StringBuilder sb = new();
-        while (!r.EndOfStream && list.Count<matchDataLimit)
+        using (StreamReader r = new StreamReader(DataPath + "games.json"))
         {
-            int c = r.Read();
-            switch (c)
+            StringBuilder sb = new();
+            while (!r.EndOfStream)
             {
+                int c = r.Read();
+                switch (c)
+                {
                 
-                case -1:
-                    break;
-                case '{':
-                    sb.Clear().Append('{');
-                    break;
-                default:
-                    sb.Append((char)c);
-                    break;
-                case '}':
-                    sb.Append('}');
-                    string s = sb.ToString();
-                    list.Add(JsonConvert.DeserializeObject<PlayerMatchData>(sb.ToString()));
-                    break;
+                    case -1:
+                        break;
+                    case '{':
+                        sb.Clear().Append('{');
+                        break;
+                    default:
+                        sb.Append((char)c);
+                        break;
+                    case '}':
+                        sb.Append('}');
+                        string s = sb.ToString();
+                        PlayerMatchData? d = JsonConvert.DeserializeObject<PlayerMatchData>(sb.ToString());
+                        if (d != null)
+                        {
+                            string uniqueEntryKey = d.date + d.player_id + d.team;
+                            if (uniqueRows.TryGetValue(uniqueEntryKey, out var oldValue))
+                            {
+                                if (oldValue.player_team_score > d.player_id)
+                                    d = oldValue;
+                            }
+                            uniqueRows[uniqueEntryKey] = d;
+                        }
+                        break;
+                }
             }
         }
         
+
+        List<PlayerMatchData> list = new List<PlayerMatchData>(uniqueRows.Count);
+
+        foreach (KeyValuePair<string, PlayerMatchData> row in uniqueRows)
+            list.Add(row.Value);
+        
         playerMatchStats = list;
+        Console.WriteLine("Raw data parsed");
+
         return playerMatchStats;
     }
 

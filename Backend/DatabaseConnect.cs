@@ -30,9 +30,16 @@ internal static class DatabaseConnect
 
     private static SqlConnection Connect() => new(ConnectionString);
 
+    public static DateTime lastConsoleReport = DateTime.Now;
     public static int RunDmlText(string sql)
     {
-        Console.WriteLine(sql);
+        // Console.WriteLine(sql);
+        DateTime now = DateTime.Now;
+        if ((now - lastConsoleReport).TotalSeconds > 10 && batchRunning)
+        {
+            Console.WriteLine("Still setting up, please wait");
+            lastConsoleReport = now;
+        }
         using var con = Connect();
         Server s = new(new ServerConnection(con));
         int r = s.ConnectionContext.ExecuteNonQuery(sql);
@@ -43,8 +50,10 @@ internal static class DatabaseConnect
     public static int RunDmlFile(string filename) => CallWithFile(RunDmlText, filename);
 
 
+    private static bool batchRunning = false;
     public static int ChunkifyOperation(Func<object[][], int> op, object[][] data, int chunkSize)
     {
+        batchRunning = true;
         int sum = 0;
         for (int i = 0; i < data.Length;)
         {
@@ -53,6 +62,7 @@ internal static class DatabaseConnect
             i = nextI;
         }
 
+        batchRunning = false;
         return sum;
     }
 
