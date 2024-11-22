@@ -36,6 +36,7 @@
             UxPlayersListBox = new ListBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             UxMatchesResultsFlowPanel = new FlowLayoutPanel();
+            UxProcessing = new Button();
             UxPlayerViewFlowLayoutPanel.SuspendLayout();
             UxSearchFlowLayoutPanel.SuspendLayout();
             SuspendLayout();
@@ -59,6 +60,7 @@
             UxSearchFlowLayoutPanel.Controls.Add(Team2Box);
             UxSearchFlowLayoutPanel.Controls.Add(Team1Box);
             UxSearchFlowLayoutPanel.Controls.Add(UxSearchBtn);
+            UxSearchFlowLayoutPanel.Controls.Add(UxProcessing);
             UxSearchFlowLayoutPanel.Location = new Point(3, 3);
             UxSearchFlowLayoutPanel.Name = "UxSearchFlowLayoutPanel";
             UxSearchFlowLayoutPanel.Size = new Size(894, 105);
@@ -101,6 +103,7 @@
             UxPlayersListBox.Name = "UxPlayersListBox";
             UxPlayersListBox.Size = new Size(894, 124);
             UxPlayersListBox.TabIndex = 2;
+            UxPlayersListBox.Visible = false;
             UxPlayersListBox.SelectedIndexChanged += UxPlayersListBox_SelectedIndexChanged;
             UxPlayersListBox.DataContextChanged += UxPlayersListBox_DataContextChanged;
             // 
@@ -108,7 +111,7 @@
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.Dock = DockStyle.Top;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(3, 244);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(894, 0);
@@ -117,12 +120,23 @@
             // UxMatchesResultsFlowPanel
             // 
             UxMatchesResultsFlowPanel.AutoScroll = true;
-            UxMatchesResultsFlowPanel.AutoSize = true;
-            UxMatchesResultsFlowPanel.Dock = DockStyle.Fill;
+            UxMatchesResultsFlowPanel.Dock = DockStyle.Top;
             UxMatchesResultsFlowPanel.Location = new Point(3, 250);
             UxMatchesResultsFlowPanel.Name = "UxMatchesResultsFlowPanel";
-            UxMatchesResultsFlowPanel.Size = new Size(894, 0);
+            UxMatchesResultsFlowPanel.Size = new Size(894, 500);
             UxMatchesResultsFlowPanel.TabIndex = 5;
+            // 
+            // UxProcessing
+            // 
+            UxProcessing.AutoSize = true;
+            UxProcessing.Enabled = false;
+            UxProcessing.Location = new Point(722, 3);
+            UxProcessing.Name = "UxProcessing";
+            UxProcessing.Size = new Size(135, 30);
+            UxProcessing.TabIndex = 4;
+            UxProcessing.Text = "PROCESSING...";
+            UxProcessing.UseVisualStyleBackColor = true;
+            UxProcessing.Visible = false;
             // 
             // MatchesViewControl
             // 
@@ -150,5 +164,6 @@
         private System.Windows.Forms.ListBox UxPlayersListBox;
         private FlowLayoutPanel flowLayoutPanel1;
         private FlowLayoutPanel UxMatchesResultsFlowPanel;
+        private Button UxProcessing;
     }
 }

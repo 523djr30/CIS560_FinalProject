@@ -7,48 +7,12 @@
       "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:matchesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\sql\\seasonsatistics2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\row.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\matchesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:matchesviewcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\sql\\getdivstats.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\databasesetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\databaseconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\footballstatsapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:footballstatsapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\sql\\getdivstats.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1BBE2D7-FC6E-47B4-8A3C-3247929E4ED3}|..\\Backend\\Backend.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\backend\\sql\\seasonsatistics2.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|c:\\users\\daniel j. robertson\\source\\repos\\cis560_finalproject\\footballstatsapp\\matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1A3E7FF-5100-48B6-A59D-EE3EAB0ECBD8}|FootballStatsApp.csproj|solutionrelative:matchcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -69,112 +33,16 @@
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SeasonSatistics2.sql ",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\SQL\\SeasonSatistics2.sql",
-              "RelativeDocumentMoniker": "..\\Backend\\SQL\\SeasonSatistics2.sql",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\SQL\\SeasonSatistics2.sql",
-              "RelativeToolTip": "..\\Backend\\SQL\\SeasonSatistics2.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-22T06:54:32.491Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MatchCard.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs",
-              "RelativeDocumentMoniker": "MatchCard.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs",
-              "RelativeToolTip": "MatchCard.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:39:31.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MatchCard.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs",
-              "RelativeDocumentMoniker": "MatchCard.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs [Design]",
-              "RelativeToolTip": "MatchCard.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:38:42.207Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "MatchesViewControl.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchesViewControl.cs",
               "RelativeDocumentMoniker": "MatchesViewControl.cs",
               "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchesViewControl.cs [Design]",
               "RelativeToolTip": "MatchesViewControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:34:11.141Z",
+              "WhenOpened": "2024-11-22T08:05:25.073Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DatabaseSetup.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\DatabaseSetup.cs",
-              "RelativeDocumentMoniker": "..\\Backend\\DatabaseSetup.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\DatabaseSetup.cs",
-              "RelativeToolTip": "..\\Backend\\DatabaseSetup.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:13:02.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Row.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\Row.cs",
-              "RelativeDocumentMoniker": "..\\Backend\\Row.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\Row.cs",
-              "RelativeToolTip": "..\\Backend\\Row.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAwBsAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:02:12.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Table.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\Table.cs",
-              "RelativeDocumentMoniker": "..\\Backend\\Table.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\Table.cs",
-              "RelativeToolTip": "..\\Backend\\Table.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T05:53:47.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetDivStats.sql ",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\Backend\\SQL\\GetDivStats.sql",
-              "RelativeDocumentMoniker": "..\\Backend\\SQL\\GetDivStats.sql",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\Backend\\SQL\\GetDivStats.sql",
-              "RelativeToolTip": "..\\Backend\\SQL\\GetDivStats.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-11-22T05:53:11.389Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -184,48 +52,22 @@
               "RelativeDocumentMoniker": "MatchesViewControl.cs",
               "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchesViewControl.cs",
               "RelativeToolTip": "MatchesViewControl.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCUAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAQwD8AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T05:51:27.566Z",
+              "WhenOpened": "2024-11-22T07:45:41.742Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FootballStatsApp.csproj",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
-              "RelativeDocumentMoniker": "FootballStatsApp.csproj",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\Source\\Repos\\CIS560_FinalProject\\FootballStatsApp\\FootballStatsApp.csproj",
-              "RelativeToolTip": "FootballStatsApp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-22T05:44:56.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DatabaseConnect.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\DatabaseConnect.cs",
-              "RelativeDocumentMoniker": "..\\Backend\\DatabaseConnect.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\Backend\\DatabaseConnect.cs",
-              "RelativeToolTip": "..\\Backend\\DatabaseConnect.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MatchCard.cs",
+              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs",
+              "RelativeDocumentMoniker": "MatchCard.cs",
+              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\MatchCard.cs",
+              "RelativeToolTip": "MatchCard.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBMAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T05:42:08.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Daniel J. Robertson\\source\\repos\\CIS560_FinalProject\\FootballStatsApp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAWwA4AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T05:36:45.631Z",
+              "WhenOpened": "2024-11-22T07:45:39.435Z",
               "EditorCaption": ""
             }
           ]

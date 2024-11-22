@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,18 @@ namespace FootballStatsApp
 {
     public partial class MatchCard : UserControl
     {
-        public MatchCard(string date, string home, string away, string winner)
+        public MatchCard(string date, string home, string away, 
+            string winner, string homepts, string awaypts, string stadium)
         {
-            UxMatchDateBtn.Text = date;
-            UxHomeTeamLabel.Text = home;
-            UxAwayTeamLabel.Text = away;
-            UxWinningTeamLabel.Text = winner;
-            
+                      
             InitializeComponent();
+            UxDateLabel.Text = date;
+            UxHomeTeamLabel.Text = home;
+            UxHomePointsLabel.Text = homepts;
+            UxAwayTeamLabel.Text = away;
+            UxAwayPointsLabel.Text = awaypts;
+            WinLbl.Text = winner;
+            UxStadiumNameLabel.Text = stadium;
         }
     }
 }

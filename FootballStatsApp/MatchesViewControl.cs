@@ -4,10 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Backend;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FootballStatsApp
 {
@@ -31,36 +33,36 @@ namespace FootballStatsApp
             Table? t = Backend.DatabaseManage.QueryFileText("Declare @TeamName1 NVarChar(32) = N'" + Team1 + "';\n" +
                                                             "Declare @TeamName2 NVarChar(32) = N'" + Team2 + "';",
                 "MatchStats");
-            foreach(Row row in t)
+
+
+            UxMatchesResultsFlowPanel.SuspendLayout();
+            UxProcessing.Visible = true;
+            // populate panel with controls
+
+            
+            foreach (Row row in t)
             {
+                /*MessageBox.Show(row.GetItem<DateTimeOffset>("Date").ToString("d") +
+                        row.GetItem<string>("HomeTeamName") +
+                        row.GetItem<string>("AwayTeamName") +
+                        row.GetItem<string>("WinningTeamName") +
+                        row.GetItem<int>("HomeTeamPoints").ToString() +
+                        row.GetItem<int>("AwayTeamPoints").ToString(),
+                        row.GetItem<string>("StadiumName"));*/
                 UxMatchesResultsFlowPanel.Controls.Add(
-                    new MatchCard(
-                        row.GetItem<string>("TeamName"),
-                        row.GetItem<string>("Wins"),
-                        row.GetItem<string>("Losses"),
-                        row.GetItem<string>("WinningTeam")
+                new MatchCard(
+                        row.GetItem<DateTimeOffset>("Date").ToString("d"),
+                        row.GetItem<string>("HomeTeamName"),
+                        row.GetItem<string>("AwayTeamName"),
+                        row.GetItem<string>("WinningTeamName"),
+                        row.GetItem<int>("HomeTeamPoints").ToString(),
+                        row.GetItem<int>("AwayTeamPoints").ToString(),
+                        row.GetItem<string>("StadiumName")
                         )
                     );
+                UxMatchesResultsFlowPanel.ResumeLayout(true);
+                UxProcessing.Visible = false;
             }
-            
-            Update();
-            //StadiumName, MatchDate AS Date, HomeTeamName, HomeTeamPoints, AwayTeamName, AwayTeamPoints
-            // Table? t2 = Backend.DatabaseManage.QueryText("Select p.PlayerId from Football.Player p where p.FirstName=N'"+FirstName+"' and p.LastName=N'"+LastName+'\'');
-            if (t != null)
-            {
-                DatabaseManage.PrintTable(t);
-
-                UxPlayersListBox.Items.Add(t.GetHeaderText());
-                foreach (Row r in t)
-                {
-                    UxPlayersListBox.Items.Add(r.ToString());
-
-                }
-            }
-
-
-
-
         }
 
 

@@ -1,26 +1,3 @@
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.exe
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.deps.json
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.runtimeconfig.json
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.dll
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.pdb
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.GenerateResource.cache
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfoInputs.cache
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfo.cs
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.CoreCompileInputs.cache
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.sourcelink.json
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.dll
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\refint\FootballStatsApp.dll
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.pdb
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.genruntimeconfig.cache
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\ref\FootballStatsApp.dll
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingView.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.BothDivStandControl.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingTextControl.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerSelectedControl.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerViewControl.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamViewControl.resources
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamCardControl.resources
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.exe
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.deps.json
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.runtimeconfig.json
@@ -118,6 +95,11 @@ C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\obj\
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerTeamJoinControl.resources
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.MatchesViewControl.resources
 C:\Users\Shay\ShaySpace\School\CIS 560\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AddMatchControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.exe
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.deps.json
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.runtimeconfig.json
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\FootballStatsApp.pdb
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\Azure.Core.dll
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\Azure.Identity.dll
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
@@ -187,8 +169,26 @@ C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\b
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\bin\Debug\net8.0-windows\Backend.pdb
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.AssemblyReference.cache
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AddMatchControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.BothDivStandControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingTextControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.LandingView.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.MatchCard.resources
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.MatchesViewControl.resources
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerAddControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerSelectedControl.resources
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerTeamJoinControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.PlayerViewControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamCardControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.TeamViewControl.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.GenerateResource.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfoInputs.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.AssemblyInfo.cs
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.csproj.CoreCompileInputs.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.sourcelink.json
 C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\Football.87EB99C1.Up2Date
-C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.MatchCard.resources
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\refint\FootballStatsApp.dll
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.pdb
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\FootballStatsApp.genruntimeconfig.cache
+C:\Users\Daniel J. Robertson\Source\Repos\CIS560_FinalProject\FootballStatsApp\obj\Debug\net8.0-windows\ref\FootballStatsApp.dll
