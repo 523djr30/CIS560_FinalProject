@@ -15,9 +15,16 @@ namespace FootballStatsApp
     {
         private List<Control> AllTeamCards;
         private List<Control> CurrentTeamCards;
+        private TextBox TeamNotFoundTextBox;
+        
         public TeamViewControl()
         {
             InitializeComponent();
+            
+            TeamNotFoundTextBox = new TextBox();
+            TeamNotFoundTextBox.MinimumSize = new Size(300,50);
+            TeamNotFoundTextBox.Text = "No Team Found with that name";
+            
             PopulateComboBox();
             InitialPopulateTeams();
         }
@@ -62,6 +69,7 @@ namespace FootballStatsApp
                 infoCards.Add(infoCard);
             }
 
+            UxTeamsFlowPanel.Controls.Clear();
             foreach (TeamCardModel infocard in infoCards)
             {
                 UxTeamsFlowPanel.Controls.Add(new TeamCardControl(infocard));
@@ -84,9 +92,10 @@ namespace FootballStatsApp
             {
                 Table? teamsInfo = Backend.DatabaseManage.QueryFileText("DECLARE @TeamName NVARCHAR(32) = N'"+teamName+"';\n", "SingleTeamCardQ");
                 UxTeamsFlowPanel.Controls.Clear();
-                if (teamsInfo is null)
+                if (teamsInfo is null || teamsInfo.Data.Length==0)
                 {
-                    InitialPopulateTeams();
+                    UxTeamsFlowPanel.Controls.Clear();
+                    UxTeamsFlowPanel.Controls.Add(TeamNotFoundTextBox);
                     return;
                 };
                 Row row = teamsInfo[0];
