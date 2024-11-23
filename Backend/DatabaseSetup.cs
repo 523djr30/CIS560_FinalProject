@@ -7,7 +7,7 @@ namespace Backend;
 using static DatabaseConnect;
 
 //Initializes database
-internal static class DatabaseSetup
+public static class DatabaseSetup
 {
     //function since we may not want to re setup the tables every single time.
     public static void SetupDB()
@@ -52,7 +52,9 @@ internal static class DatabaseSetup
         CreateTables();
         PopulateAllTables();
         FileManager.FreeMemoryHog();
-        Console.WriteLine("Done, total time taken is "+Math.Floor((DateTime.Now-start).TotalMinutes)+":"+(DateTime.Now-start).Seconds);
+        double timediff = Math.Floor((DateTime.Now - start).TotalMinutes);
+        double timediff_sec = (DateTime.Now - start).Seconds;
+        Console.WriteLine("Done, total time taken is "+timediff+":"+timediff_sec);
     }
 
     private static void CreateTables() => RunDmlFile("CreateTables");

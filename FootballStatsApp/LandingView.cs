@@ -1,4 +1,5 @@
 using System.Media;
+using Backend;
 
 namespace FootballStatsApp
 {
@@ -16,6 +17,11 @@ namespace FootballStatsApp
         /// Represents player view.
         /// </summary>
         private PlayerViewControl UxPlayerViewControl = new();
+        private PlayerAddControl UxPlayerAddControl = new();
+        private PlayerTeamJoinControl UxPlayerTeamJoinControl = new();
+        private MatchesViewControl UxMatchesBetweenTeamsControl = new();
+        private AddMatchControl UxAddMatchControl = new();
+        
         /// <summary>
         /// Represents team view.
         /// </summary>
@@ -51,6 +57,12 @@ namespace FootballStatsApp
             UxLandingFlowLayoutPanel.Controls.Clear();
             UxLandingFlowLayoutPanel.Controls.Add(UxPlayerViewControl);
         }
+        
+        private void OpenPlayerAddView()
+        {
+            UxLandingFlowLayoutPanel.Controls.Clear();
+            UxLandingFlowLayoutPanel.Controls.Add(UxPlayerAddControl);
+        }
 
         /// <summary>
         /// Instantiaties Player View.
@@ -58,7 +70,25 @@ namespace FootballStatsApp
         private void OpenTeamView()
         {
             UxLandingFlowLayoutPanel.Controls.Clear();
-            UxLandingFlowLayoutPanel.Controls.Add(UxPlayerViewControl);
+            UxLandingFlowLayoutPanel.Controls.Add(UxTeamViewControl);
+        }
+        
+        private void OpenPlayerTeamJoinControl()
+        {
+            UxLandingFlowLayoutPanel.Controls.Clear();
+            UxLandingFlowLayoutPanel.Controls.Add(UxPlayerTeamJoinControl);
+        }
+        
+        private void OpenMatchesBetweenTeamsControl()
+        {
+            UxLandingFlowLayoutPanel.Controls.Clear();
+            UxLandingFlowLayoutPanel.Controls.Add(UxMatchesBetweenTeamsControl);
+        }
+        
+        private void OpenAddMatchControl()
+        {
+            UxLandingFlowLayoutPanel.Controls.Clear();
+            UxLandingFlowLayoutPanel.Controls.Add(UxAddMatchControl);
         }
 
         /// <summary>
@@ -104,6 +134,28 @@ namespace FootballStatsApp
         private void teamsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenTeamView();
+            DatabaseManage.SetupDB();
+
+        }
+
+        private void addPlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenPlayerAddView();
+        }
+
+        private void joinTeamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenPlayerTeamJoinControl();
+        }
+
+        private void mathcesBetweenTeamsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenMatchesBetweenTeamsControl();
+        }
+
+        private void addMatchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAddMatchControl();
         }
     }
 }

@@ -12,9 +12,21 @@ namespace FootballStatsApp
 {
     public partial class TeamCardControl : UserControl
     {
-        public TeamCardControl()
+        public TeamCardControl(TeamCardModel teamData)
         {
             InitializeComponent();
+            UxCityLocLabel.Text = teamData.city;
+            UxDivisionNameLabel.Text = teamData.divisionName;
+            UxNumLossLabel.Text = teamData.numLoss.ToString();
+            UxNumWinLabel.Text = teamData.numWins.ToString();
+            UxStadiumLabel.Text = teamData.stadium;
+            //UxStartDateLabel.Text = teamData.startDate;
+            UxTeamNameLabel.Text = teamData.name;
+        }
+
+        private void UxLossesFlowPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

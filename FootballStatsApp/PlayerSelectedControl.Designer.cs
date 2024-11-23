@@ -40,6 +40,8 @@
             // 
             // UxPlayerSelViewFlowPanel
             // 
+            UxPlayerSelViewFlowPanel.AutoScroll = true;
+            UxPlayerSelViewFlowPanel.AutoSize = true;
             UxPlayerSelViewFlowPanel.Controls.Add(UxPlayerInfoFlowPanel);
             UxPlayerSelViewFlowPanel.Controls.Add(UxPlayerDataGridView);
             UxPlayerSelViewFlowPanel.Dock = DockStyle.Fill;
@@ -55,24 +57,24 @@
             UxPlayerInfoFlowPanel.Dock = DockStyle.Top;
             UxPlayerInfoFlowPanel.Location = new Point(3, 3);
             UxPlayerInfoFlowPanel.Name = "UxPlayerInfoFlowPanel";
-            UxPlayerInfoFlowPanel.Size = new Size(250, 125);
+            UxPlayerInfoFlowPanel.Size = new Size(498, 403);
             UxPlayerInfoFlowPanel.TabIndex = 0;
             // 
             // UxPlayerNameLabel
             // 
             UxPlayerNameLabel.AutoSize = true;
-            UxPlayerNameLabel.Font = new Font("Segoe UI", 16F);
+            UxPlayerNameLabel.Font = new Font("Segoe UI", 14F);
             UxPlayerNameLabel.Location = new Point(3, 0);
             UxPlayerNameLabel.Name = "UxPlayerNameLabel";
-            UxPlayerNameLabel.Size = new Size(167, 37);
+            UxPlayerNameLabel.Size = new Size(149, 32);
             UxPlayerNameLabel.TabIndex = 0;
             UxPlayerNameLabel.Text = "Player Name";
             // 
             // UxInfoOrganizerFlowPanel
             // 
-            UxInfoOrganizerFlowPanel.Location = new Point(3, 40);
+            UxInfoOrganizerFlowPanel.Location = new Point(3, 35);
             UxInfoOrganizerFlowPanel.Name = "UxInfoOrganizerFlowPanel";
-            UxInfoOrganizerFlowPanel.Size = new Size(448, 322);
+            UxInfoOrganizerFlowPanel.Size = new Size(492, 365);
             UxInfoOrganizerFlowPanel.TabIndex = 1;
             // 
             // UxPlayerDataGridView
@@ -81,7 +83,7 @@
             UxPlayerDataGridView.AllowUserToDeleteRows = false;
             UxPlayerDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             UxPlayerDataGridView.Dock = DockStyle.Fill;
-            UxPlayerDataGridView.Location = new Point(3, 134);
+            UxPlayerDataGridView.Location = new Point(3, 412);
             UxPlayerDataGridView.Name = "UxPlayerDataGridView";
             UxPlayerDataGridView.ReadOnly = true;
             UxPlayerDataGridView.RowHeadersWidth = 51;
@@ -100,6 +102,7 @@
             UxPlayerInfoFlowPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)UxPlayerDataGridView).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

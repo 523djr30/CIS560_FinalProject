@@ -1,0 +1,1 @@
+Select TeamId, [Name] AS TeamName From Football.Team;
