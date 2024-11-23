@@ -18,6 +18,17 @@ namespace FootballStatsApp
         public MatchesViewControl()
         {
             InitializeComponent();
+            UxHeaderPanel.Controls.Add(
+                new MatchCard(
+                    "Date",
+                    "Home Team",
+                    "Away Team",
+                    "Winning Team",
+                    "Home Team Points",
+                    "Away Team Points",
+                    "Stadium"
+                )
+            );
         }
 
         public static string Sanitize(string s)
@@ -34,19 +45,10 @@ namespace FootballStatsApp
                 "MatchStats");
 
 
+            UxMatchesResultsFlowPanel.Controls.Clear();
             UxMatchesResultsFlowPanel.SuspendLayout();
             // populate panel with controls
-            UxHeaderPanel.Controls.Add(
-                new MatchCard(
-                        "Date",
-                        "Home Team",
-                        "Away Team",
-                        "Winning Team",
-                        "Home Team Points",
-                        "Away Team Points",
-                        "Stadium"
-                    )
-                );
+            
             
             foreach (Row row in t)
             {
