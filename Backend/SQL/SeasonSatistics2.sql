@@ -1,3 +1,6 @@
+--Declare @SeasonId int = 2001;
+--Declare @TeamName NVarChar(32) = N'Bills';
+
 WITH TeamSeasonStats AS (
     SELECT T.Name AS TeamName, S.SeasonId,
         COUNT(CASE WHEN (M.HomeTeamId = T.TeamId AND 

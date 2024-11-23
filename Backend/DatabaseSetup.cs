@@ -50,7 +50,6 @@ public static class DatabaseSetup
     {
         DateTime start = DateTime.Now;
         CreateTables();
-        // ExamplePopulateTable();
         PopulateAllTables();
         FileManager.FreeMemoryHog();
         double timediff = Math.Floor((DateTime.Now - start).TotalMinutes);
@@ -181,7 +180,7 @@ public static class DatabaseSetup
     private static int PopulateSeason()
     {
         List<object[]> data = [];
-        for (int i = 1970; i < 2024; i++)
+        for (int i = 1900; i < 2100; i++)
         {
             data.Add([
                 i,
