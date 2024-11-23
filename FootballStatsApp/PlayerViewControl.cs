@@ -82,7 +82,8 @@ namespace FootballStatsApp
                 }
                 
 
-                DatabaseManage.PrintTable(t);
+                Console.WriteLine(t);
+                // DatabaseManage.PrintTable(t);
 
 
                 UxPlayersListBox.Items.Add(t.ToString());

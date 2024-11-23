@@ -108,7 +108,7 @@ namespace FootballStatsApp
         /// <param name="e"></param>
         private void LandingView_Load(Object sender, EventArgs e)
         {
-
+            // DatabaseManage.SetupDB();
         }
 
         /// <summary>
@@ -134,8 +134,6 @@ namespace FootballStatsApp
         private void teamsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenTeamView();
-            DatabaseManage.SetupDB();
-
         }
 
         private void addPlayerToolStripMenuItem_Click(object sender, EventArgs e)
