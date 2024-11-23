@@ -19,10 +19,16 @@
     <Compile Update="PlayerViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="SingleDivControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="TeamCardControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="TeamViewControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="TeamInDiv.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

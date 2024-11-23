@@ -29,17 +29,9 @@
         private void InitializeComponent()
         {
             tableLayoutPanel1 = new TableLayoutPanel();
-            UxAFCFlowPanel = new FlowLayoutPanel();
-            UxAFCDivLabel = new Label();
-            UxAFCDataGridView = new DataGridView();
             UxNFCFlowLayoutPanel = new FlowLayoutPanel();
-            UxNFCLabel = new Label();
-            UxNFCDataGridView = new DataGridView();
+            UxAFCFlowPanel = new FlowLayoutPanel();
             tableLayoutPanel1.SuspendLayout();
-            UxAFCFlowPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)UxAFCDataGridView).BeginInit();
-            UxNFCFlowLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)UxNFCDataGridView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,97 +50,38 @@
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1000, 500);
+            tableLayoutPanel1.Size = new Size(800, 800);
             tableLayoutPanel1.TabIndex = 0;
-            // 
-            // UxAFCFlowPanel
-            // 
-            UxAFCFlowPanel.AutoSize = true;
-            UxAFCFlowPanel.Controls.Add(UxAFCDivLabel);
-            UxAFCFlowPanel.Controls.Add(UxAFCDataGridView);
-            UxAFCFlowPanel.Dock = DockStyle.Fill;
-            UxAFCFlowPanel.FlowDirection = FlowDirection.TopDown;
-            UxAFCFlowPanel.Location = new Point(14, 14);
-            UxAFCFlowPanel.Name = "UxAFCFlowPanel";
-            UxAFCFlowPanel.Size = new Size(482, 472);
-            UxAFCFlowPanel.TabIndex = 0;
-            // 
-            // UxAFCDivLabel
-            // 
-            UxAFCDivLabel.AutoSize = true;
-            UxAFCDivLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            UxAFCDivLabel.Location = new Point(3, 0);
-            UxAFCDivLabel.Name = "UxAFCDivLabel";
-            UxAFCDivLabel.Size = new Size(177, 32);
-            UxAFCDivLabel.TabIndex = 0;
-            UxAFCDivLabel.Text = "AFC Standings";
-            // 
-            // UxAFCDataGridView
-            // 
-            UxAFCDataGridView.AllowUserToAddRows = false;
-            UxAFCDataGridView.AllowUserToDeleteRows = false;
-            UxAFCDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            UxAFCDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UxAFCDataGridView.Dock = DockStyle.Fill;
-            UxAFCDataGridView.Location = new Point(3, 35);
-            UxAFCDataGridView.Name = "UxAFCDataGridView";
-            UxAFCDataGridView.ReadOnly = true;
-            UxAFCDataGridView.RowHeadersWidth = 51;
-            UxAFCDataGridView.Size = new Size(177, 188);
-            UxAFCDataGridView.TabIndex = 1;
             // 
             // UxNFCFlowLayoutPanel
             // 
+            UxNFCFlowLayoutPanel.AutoScroll = true;
             UxNFCFlowLayoutPanel.AutoSize = true;
-            UxNFCFlowLayoutPanel.Controls.Add(UxNFCLabel);
-            UxNFCFlowLayoutPanel.Controls.Add(UxNFCDataGridView);
             UxNFCFlowLayoutPanel.Dock = DockStyle.Fill;
-            UxNFCFlowLayoutPanel.FlowDirection = FlowDirection.TopDown;
-            UxNFCFlowLayoutPanel.Location = new Point(503, 14);
+            UxNFCFlowLayoutPanel.Location = new Point(403, 14);
             UxNFCFlowLayoutPanel.Name = "UxNFCFlowLayoutPanel";
-            UxNFCFlowLayoutPanel.Size = new Size(483, 472);
+            UxNFCFlowLayoutPanel.Size = new Size(383, 772);
             UxNFCFlowLayoutPanel.TabIndex = 1;
             // 
-            // UxNFCLabel
+            // UxAFCFlowPanel
             // 
-            UxNFCLabel.AutoSize = true;
-            UxNFCLabel.Font = new Font("Segoe UI", 14F, FontStyle.Bold);
-            UxNFCLabel.Location = new Point(3, 0);
-            UxNFCLabel.Name = "UxNFCLabel";
-            UxNFCLabel.Size = new Size(179, 32);
-            UxNFCLabel.TabIndex = 0;
-            UxNFCLabel.Text = "NFC Standings";
-            // 
-            // UxNFCDataGridView
-            // 
-            UxNFCDataGridView.AllowUserToAddRows = false;
-            UxNFCDataGridView.AllowUserToDeleteRows = false;
-            UxNFCDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            UxNFCDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            UxNFCDataGridView.Dock = DockStyle.Fill;
-            UxNFCDataGridView.Location = new Point(3, 35);
-            UxNFCDataGridView.Name = "UxNFCDataGridView";
-            UxNFCDataGridView.ReadOnly = true;
-            UxNFCDataGridView.RowHeadersWidth = 51;
-            UxNFCDataGridView.Size = new Size(179, 188);
-            UxNFCDataGridView.TabIndex = 1;
+            UxAFCFlowPanel.AutoScroll = true;
+            UxAFCFlowPanel.AutoSize = true;
+            UxAFCFlowPanel.Dock = DockStyle.Fill;
+            UxAFCFlowPanel.Location = new Point(14, 14);
+            UxAFCFlowPanel.Name = "UxAFCFlowPanel";
+            UxAFCFlowPanel.Size = new Size(382, 772);
+            UxAFCFlowPanel.TabIndex = 0;
             // 
             // BothDivStandControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tableLayoutPanel1);
-            MinimumSize = new Size(1000, 500);
             Name = "BothDivStandControl";
-            Size = new Size(1000, 500);
+            Size = new Size(800, 800);
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            UxAFCFlowPanel.ResumeLayout(false);
-            UxAFCFlowPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)UxAFCDataGridView).EndInit();
-            UxNFCFlowLayoutPanel.ResumeLayout(false);
-            UxNFCFlowLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)UxNFCDataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,10 +90,6 @@
 
         private TableLayoutPanel tableLayoutPanel1;
         private FlowLayoutPanel UxAFCFlowPanel;
-        private Label UxAFCDivLabel;
         private FlowLayoutPanel UxNFCFlowLayoutPanel;
-        private Label UxNFCLabel;
-        private DataGridView UxNFCDataGridView;
-        private DataGridView UxAFCDataGridView;
     }
 }

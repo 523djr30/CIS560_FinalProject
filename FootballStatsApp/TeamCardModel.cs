@@ -20,8 +20,5 @@ namespace FootballStatsApp
         public string divisionName = "none";
         public int numWins = 0;
         public int numLoss = 0;
-
-        public Table? roster;
-        public Table? matches;
     }
 }
